@@ -1,0 +1,62 @@
+﻿@using ClinicInfrastructure
+@{
+    ViewData["Title"] = "Home Page";
+}
+<style>
+    body {
+        margin-bottom: 60px;
+        background-image: url('/images/Background2.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+</style>
+<div class="row" style="margin-top:60px;">
+    <div class="col-sm-3 mx-auto my-auto">
+        <div class="card bg-primary text-white custom-rounded-card">
+            <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between">
+                    <h5 class="card-title">Реєстратура</h5>
+                    <img src="~/images/list1.svg" alt="Your Icon" style="width: 30px; height: 30px;">
+                </div>
+                <hr />
+                <p class="card-text">Записи відвідувань пацієнтів</p>
+                <div class="d-flex justify-content-center">
+                    <a href="" class="btn btn-light">Перейти</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3 mx-auto my-auto">
+        <div class="card bg-primary text-white custom-rounded-card">
+            <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between">
+                    <h5 class="card-title">Пацієнти</h5>
+                    <img src="~/images/patient2.svg" alt="Your Icon" style="width: 30px; height: 30px;">
+                </div>
+                <hr />
+                <p class="card-text">Картки пацієнтів</p>
+                <div class="d-flex justify-content-center">
+                    <a asp-area="" asp-controller="PatientCards" asp-action="" class="btn btn-light">Перейти</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3 mx-auto my-auto">
+        <div class="card bg-primary text-white custom-rounded-card">
+            <div class="card-body">
+                <div class="d-flex align-items-center justify-content-between">
+                    <h5 class="card-title">Прайс-лист</h5>
+                    <img src="~/images/price1.svg" alt="Your Icon" style="width: 30px; height: 30px;">
+                </div>
+                <hr />
+                <p class="card-text">Прайс-лист процедур</p>
+                <div class="d-flex justify-content-center">
+                    <a href="#" class="btn btn-light">Перейти</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,71 @@
+﻿@model IEnumerable<ClinicDomain.Models.PatientCard>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Пацієнти</h1>
+
+<div >
+    <p class="me-2">
+        <a asp-action="Create" class="btn btn-primary">Додати</a>
+    </p>
+    <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Пошук" style="width: 200px;">
+        <button class="btn btn-outline-primary" type="submit">Знайти</button>
+    </form>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                ПІБ
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PhoneNumber)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Discount)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName) @Html.DisplayFor(modelItem => item.FirstName) @Html.DisplayFor(modelItem => item.FatherName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNumber)
+            </td>
+                <td>
+                    @{
+                        if (item.Discount.Id == 1)
+                        {
+                        }
+                        else
+                        {
+                            @Html.DisplayFor(modelItem => item.Discount.DiscountPercent)@:%
+                        }
+                    }
+                </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.Id">Деталі</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<div style="margin-top:20px;">
+    <a asp-area="" asp-controller="Home" asp-action="">Назад</a>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+    <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z" />
+</svg>

@@ -1,0 +1,114 @@
+﻿@model ClinicDomain.Models.PatientCard
+@using ClinicDomain
+@using ClinicInfrastructure
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h3>Детальна інформація</h3>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            ПІБ
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LastName) @Html.DisplayFor(model => model.FirstName) @Html.DisplayFor(model => model.FatherName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+        <dt class = "col-sm-2">
+            Вік
+        </dt>
+        <dd class = "col-sm-10">
+            @{
+                var ageCalculator = new CalculateAge
+            {
+                DateOfBirth = new DateTime(Model.DateOfBirth.Year, Model.DateOfBirth.Month, Model.DateOfBirth.Day)
+            };
+                var age = ageCalculator.AgeCalculator();
+                @age
+            }
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AddInfo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AddInfo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Allergy)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Allergy)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ChronicDisease)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ChronicDisease)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Diseases)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Diseases)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Discount)
+        </dt>
+        <dd class = "col-sm-10">
+            @{
+                if (Model.Discount.Id == 1)
+                {
+                    @:Без знижки
+                }
+                else
+                {
+                    @Html.DisplayFor(modelItem => Model.Discount.DiscountPercent)@:%
+                }
+            }
+        </dd>
+    </dl>
+</div>
+<div style="margin-top:50px;">
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary" style="margin-right:30px;">Редагувати</a> |
+    <a class="btn btn-danger" style="margin-left:30px;" data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal">Видалити</a>
+</div>
+<div style ="margin-top:20px;">
+    <a asp-action="Index">Назад</a>
+</div>
+
+<div class="modal fade" id="deleteConfirmationModal" tabindex="-1" role="dialog" aria-labelledby="deleteConfirmationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteConfirmationModalLabel">Підтвердження видалення</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Ви впевнені, що хочете видалити картку?
+            </div>
+            <div class="modal-footer">
+                <form asp-action="Delete">
+                    <input type="hidden" asp-for="Id" />
+                    <input type="submit" value="Видалити" class="btn btn-danger"/>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+        const myModal = document.getElementById('myModal')
+        const myInput = document.getElementById('myInput')
+
+        myModal.addEventListener('shown.bs.modal', () => {
+            myInput.focus()
+        })
+</script>

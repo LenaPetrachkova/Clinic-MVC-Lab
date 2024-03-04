@@ -1,0 +1,284 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|c:\\users\\professional\\desktop\\lab1\\src\\clinicmvc\\clinicinfrastructure\\views\\patientcards\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|solutionrelative:clinicinfrastructure\\views\\patientcards\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|c:\\users\\professional\\desktop\\lab1\\src\\clinicmvc\\clinicinfrastructure\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|solutionrelative:clinicinfrastructure\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|c:\\users\\professional\\desktop\\lab1\\src\\clinicmvc\\clinicinfrastructure\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|solutionrelative:clinicinfrastructure\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|c:\\users\\professional\\desktop\\lab1\\src\\clinicmvc\\clinicinfrastructure\\views\\patientcards\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|solutionrelative:clinicinfrastructure\\views\\patientcards\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA2DDEA6-F0EB-4D6C-975F-321E275B182F}|ClinicDomain\\ClinicDomain.csproj|c:\\users\\professional\\desktop\\lab1\\src\\clinicmvc\\clinicdomain\\model\\patientcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA2DDEA6-F0EB-4D6C-975F-321E275B182F}|ClinicDomain\\ClinicDomain.csproj|solutionrelative:clinicdomain\\model\\patientcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|c:\\users\\professional\\desktop\\lab1\\src\\clinicmvc\\clinicinfrastructure\\views\\patientcards\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|solutionrelative:clinicinfrastructure\\views\\patientcards\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|c:\\users\\professional\\desktop\\lab1\\src\\clinicmvc\\clinicinfrastructure\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|solutionrelative:clinicinfrastructure\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|c:\\users\\professional\\desktop\\lab1\\src\\clinicmvc\\clinicinfrastructure\\controllers\\patientcardscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|solutionrelative:clinicinfrastructure\\controllers\\patientcardscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|c:\\users\\professional\\desktop\\lab1\\src\\clinicmvc\\clinicinfrastructure\\cliniccontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|solutionrelative:clinicinfrastructure\\cliniccontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|c:\\users\\professional\\desktop\\lab1\\src\\clinicmvc\\clinicinfrastructure\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|solutionrelative:clinicinfrastructure\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|c:\\users\\professional\\desktop\\lab1\\src\\clinicmvc\\clinicinfrastructure\\wwwroot\\css\\bootstrap.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|solutionrelative:clinicinfrastructure\\wwwroot\\css\\bootstrap.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|c:\\users\\professional\\desktop\\lab1\\src\\clinicmvc\\clinicinfrastructure\\wwwroot\\css\\bootstrap_quartz.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|solutionrelative:clinicinfrastructure\\wwwroot\\css\\bootstrap_quartz.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|c:\\users\\professional\\desktop\\lab1\\src\\clinicmvc\\clinicinfrastructure\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|solutionrelative:clinicinfrastructure\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|c:\\users\\professional\\desktop\\lab1\\src\\clinicmvc\\clinicinfrastructure\\views\\patientcards\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|solutionrelative:clinicinfrastructure\\views\\patientcards\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA2DDEA6-F0EB-4D6C-975F-321E275B182F}|ClinicDomain\\ClinicDomain.csproj|c:\\users\\professional\\desktop\\lab1\\src\\clinicmvc\\clinicdomain\\model\\procedure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA2DDEA6-F0EB-4D6C-975F-321E275B182F}|ClinicDomain\\ClinicDomain.csproj|solutionrelative:clinicdomain\\model\\procedure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PatientCard.cs",
+              "DocumentMoniker": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicDomain\\Model\\PatientCard.cs",
+              "RelativeDocumentMoniker": "ClinicDomain\\Model\\PatientCard.cs",
+              "ToolTip": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicDomain\\Model\\PatientCard.cs",
+              "RelativeToolTip": "ClinicDomain\\Model\\PatientCard.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAQwCYAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T22:57:03.505Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "ClinicInfrastructure\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "ClinicInfrastructure\\wwwroot\\css\\site.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-03-04T09:23:09.575Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "ClinicInfrastructure\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "ClinicInfrastructure\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-04T15:53:13.099Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\Views\\PatientCards\\Index.cshtml",
+              "RelativeDocumentMoniker": "ClinicInfrastructure\\Views\\PatientCards\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\Views\\PatientCards\\Index.cshtml",
+              "RelativeToolTip": "ClinicInfrastructure\\Views\\PatientCards\\Index.cshtml",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAAEYAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-04T18:27:11.716Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\Views\\PatientCards\\Details.cshtml",
+              "RelativeDocumentMoniker": "ClinicInfrastructure\\Views\\PatientCards\\Details.cshtml",
+              "ToolTip": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\Views\\PatientCards\\Details.cshtml",
+              "RelativeToolTip": "ClinicInfrastructure\\Views\\PatientCards\\Details.cshtml",
+              "ViewState": "AQIAADMAAAAAAAAAAAAAAFAAAABJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-03T22:21:15.914Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Procedure.cs",
+              "DocumentMoniker": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicDomain\\Model\\Procedure.cs",
+              "RelativeDocumentMoniker": "ClinicDomain\\Model\\Procedure.cs",
+              "ToolTip": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicDomain\\Model\\Procedure.cs",
+              "RelativeToolTip": "ClinicDomain\\Model\\Procedure.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T23:13:29.032Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\Views\\PatientCards\\Edit.cshtml",
+              "RelativeDocumentMoniker": "ClinicInfrastructure\\Views\\PatientCards\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\Views\\PatientCards\\Edit.cshtml",
+              "RelativeToolTip": "ClinicInfrastructure\\Views\\PatientCards\\Edit.cshtml",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAADYAAABrAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-03T22:56:50.298Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ClinicContext.cs",
+              "DocumentMoniker": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\ClinicContext.cs",
+              "RelativeDocumentMoniker": "ClinicInfrastructure\\ClinicContext.cs",
+              "ToolTip": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\ClinicContext.cs",
+              "RelativeToolTip": "ClinicInfrastructure\\ClinicContext.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAAswCcAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T22:42:20.468Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "PatientCardsController.cs",
+              "DocumentMoniker": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\Controllers\\PatientCardsController.cs",
+              "RelativeDocumentMoniker": "ClinicInfrastructure\\Controllers\\PatientCardsController.cs",
+              "ToolTip": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\Controllers\\PatientCardsController.cs",
+              "RelativeToolTip": "ClinicInfrastructure\\Controllers\\PatientCardsController.cs",
+              "ViewState": "AQIAAEsAAAAAAAAAAAAQwFAAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-03T23:06:53.553Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "bootstrap_quartz.css",
+              "DocumentMoniker": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\wwwroot\\css\\bootstrap_quartz.css",
+              "RelativeDocumentMoniker": "ClinicInfrastructure\\wwwroot\\css\\bootstrap_quartz.css",
+              "ToolTip": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\wwwroot\\css\\bootstrap_quartz.css",
+              "RelativeToolTip": "ClinicInfrastructure\\wwwroot\\css\\bootstrap_quartz.css",
+              "ViewState": "AQIAAE4AAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-03-04T19:28:08.44Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "ClinicInfrastructure\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "ClinicInfrastructure\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-03T20:18:01.074Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "bootstrap.css",
+              "DocumentMoniker": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\wwwroot\\css\\bootstrap.css",
+              "RelativeDocumentMoniker": "ClinicInfrastructure\\wwwroot\\css\\bootstrap.css",
+              "ToolTip": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\wwwroot\\css\\bootstrap.css",
+              "RelativeToolTip": "ClinicInfrastructure\\wwwroot\\css\\bootstrap.css",
+              "ViewState": "AQIAACENAAAAAAAAAAAnwNMMAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-03-04T17:06:46.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\Program.cs",
+              "RelativeDocumentMoniker": "ClinicInfrastructure\\Program.cs",
+              "ToolTip": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\Program.cs",
+              "RelativeToolTip": "ClinicInfrastructure\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-04T18:53:08.906Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\Views\\PatientCards\\Create.cshtml",
+              "RelativeDocumentMoniker": "ClinicInfrastructure\\Views\\PatientCards\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\Views\\PatientCards\\Create.cshtml",
+              "RelativeToolTip": "ClinicInfrastructure\\Views\\PatientCards\\Create.cshtml",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAAAYAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-03T23:08:46.037Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "ClinicInfrastructure\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "ClinicInfrastructure\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-04T15:53:01.278Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

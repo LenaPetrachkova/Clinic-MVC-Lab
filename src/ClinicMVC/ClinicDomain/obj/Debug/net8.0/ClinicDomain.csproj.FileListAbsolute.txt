@@ -1,0 +1,14 @@
+C:\Users\Professional\Desktop\Lab1\src\ClinicMVC\ClinicDomain\bin\Debug\net8.0\ClinicDomain.deps.json
+C:\Users\Professional\Desktop\Lab1\src\ClinicMVC\ClinicDomain\bin\Debug\net8.0\ClinicDomain.runtimeconfig.json
+C:\Users\Professional\Desktop\Lab1\src\ClinicMVC\ClinicDomain\bin\Debug\net8.0\ClinicDomain.dll
+C:\Users\Professional\Desktop\Lab1\src\ClinicMVC\ClinicDomain\bin\Debug\net8.0\ClinicDomain.pdb
+C:\Users\Professional\Desktop\Lab1\src\ClinicMVC\ClinicDomain\obj\Debug\net8.0\ClinicDomain.csproj.AssemblyReference.cache
+C:\Users\Professional\Desktop\Lab1\src\ClinicMVC\ClinicDomain\obj\Debug\net8.0\ClinicDomain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Professional\Desktop\Lab1\src\ClinicMVC\ClinicDomain\obj\Debug\net8.0\ClinicDomain.AssemblyInfoInputs.cache
+C:\Users\Professional\Desktop\Lab1\src\ClinicMVC\ClinicDomain\obj\Debug\net8.0\ClinicDomain.AssemblyInfo.cs
+C:\Users\Professional\Desktop\Lab1\src\ClinicMVC\ClinicDomain\obj\Debug\net8.0\ClinicDomain.csproj.CoreCompileInputs.cache
+C:\Users\Professional\Desktop\Lab1\src\ClinicMVC\ClinicDomain\obj\Debug\net8.0\ClinicDomain.dll
+C:\Users\Professional\Desktop\Lab1\src\ClinicMVC\ClinicDomain\obj\Debug\net8.0\refint\ClinicDomain.dll
+C:\Users\Professional\Desktop\Lab1\src\ClinicMVC\ClinicDomain\obj\Debug\net8.0\ClinicDomain.pdb
+C:\Users\Professional\Desktop\Lab1\src\ClinicMVC\ClinicDomain\obj\Debug\net8.0\ClinicDomain.genruntimeconfig.cache
+C:\Users\Professional\Desktop\Lab1\src\ClinicMVC\ClinicDomain\obj\Debug\net8.0\ref\ClinicDomain.dll

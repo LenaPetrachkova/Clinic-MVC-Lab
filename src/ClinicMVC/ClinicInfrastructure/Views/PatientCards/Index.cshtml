@@ -3,18 +3,22 @@
 @{
     ViewData["Title"] = "Index";
 }
-
-<h1>Пацієнти</h1>
-
-<div >
-    <p class="me-2">
-        <a asp-action="Create" class="btn btn-primary">Додати</a>
-    </p>
-    <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Пошук" style="width: 200px;">
-        <button class="btn btn-outline-primary" type="submit">Знайти</button>
-    </form>
+<div style="margin-top:20px; display: flex; align-items: center; ">
+    <a asp-area="" asp-controller="Home" asp-action="" class="image-button" style="position: absolute; left: 80px ; top: 14%; transform: translateY(-50%); z-index:4;"></a>
+    <h2>Пацієнти</h2>
 </div>
+
+<div style="position: relative;">
+    <div class="d-flex align-items-center" style="margin-bottom:20px; margin-top:20px;">
+        <p class="me-2 mb-0">
+            <a asp-action="Create" class="btn btn-primary">Додати</a>
+        </p>
+        <form class="input-group mb-0 d-flex ms-auto justify-content-end">
+            <input class="form-control" name="searchString" style="max-width: 300px;" placeholder="Пошук" aria-describedby="button-addon2" value="@ViewBag.CurrentFilter">
+            <button class="btn btn-primary" type="submit" id="button-addon2">Знайти</button>
+        </form>
+    </div>
+ </div>
 <table class="table">
     <thead>
         <tr>
@@ -56,16 +60,10 @@
                         }
                     }
                 </td>
-            <td>
-                <a asp-action="Details" asp-route-id="@item.Id">Деталі</a>
+            <td style="text-align: right;">
+                <a asp-action="Details" asp-route-id="@item.Id" class="details-image-button"></a>
             </td>
         </tr>
 }
     </tbody>
 </table>
-<div style="margin-top:20px;">
-    <a asp-area="" asp-controller="Home" asp-action="">Назад</a>
-</div>
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
-    <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z" />
-</svg>

@@ -23,9 +23,51 @@ html {
 }
 
 .footer {
-    background: rgba(255, 255, 255, 0.5); 
-    backdrop-filter: blur(3px); 
-    color: black; 
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(3px);
+    color: black;
+}
+
+.image-button {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url('/images/arrow-left-circle-fill.svg');
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+    text-indent: -9999px; 
+}
+
+.edit-image-button {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url('/images/pencil.svg');
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+    text-indent: -9999px;
+}
+.delete-image-button {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url('/images/trash3.svg');
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+    text-indent: -9999px;
+}
+.details-image-button {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url('/images/icons8-info.svg');
+    background-size: cover;
+    border: none;
+    cursor: pointer;
+    text-indent: -9999px;
 }
 
 

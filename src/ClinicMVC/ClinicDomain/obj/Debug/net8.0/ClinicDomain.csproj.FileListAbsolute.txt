@@ -12,3 +12,4 @@ C:\Users\Professional\Desktop\Lab1\src\ClinicMVC\ClinicDomain\obj\Debug\net8.0\r
 C:\Users\Professional\Desktop\Lab1\src\ClinicMVC\ClinicDomain\obj\Debug\net8.0\ClinicDomain.pdb
 C:\Users\Professional\Desktop\Lab1\src\ClinicMVC\ClinicDomain\obj\Debug\net8.0\ClinicDomain.genruntimeconfig.cache
 C:\Users\Professional\Desktop\Lab1\src\ClinicMVC\ClinicDomain\obj\Debug\net8.0\ref\ClinicDomain.dll
+C:\Users\Professional\Desktop\Lab1\src\ClinicMVC\ClinicDomain\obj\Debug\net8.0\ClinicDomain.sourcelink.json

@@ -22,9 +22,27 @@ namespace ClinicInfrastructure.Controllers
         }
 
         // GET: PatientCards
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-            var clinicContext = _context.PatientCards.Include(p => p.Discount);
+            var clinicContext = _context.PatientCards.AsQueryable(); 
+
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                clinicContext = clinicContext
+                    .Include(p => p.Discount)
+                    .Where(p =>
+                        p.FirstName.Contains(searchString) ||
+                        p.LastName.Contains(searchString) ||
+                        p.FatherName.Contains(searchString) ||
+                        p.PhoneNumber.Contains(searchString) ||
+                        p.Id.Equals(searchString)
+                    );
+            }
+            else
+            {
+                clinicContext = clinicContext.Include(p => p.Discount);
+            }
+
             return View(await clinicContext.ToListAsync());
         }
 

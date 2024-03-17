@@ -3,8 +3,10 @@
 @{
     ViewData["Title"] = "Edit";
 }
-
-<h3>Редагування</h3>
+<div style="margin-top:20px; display: flex; align-items: center; ">
+    <a asp-area="" asp-controller="PatientCards" asp-action="Details" asp-route-id="@Model.Id" class="image-button" style="position: absolute; left: 80px ; top: 14%; transform: translateY(-50%); z-index:4;"></a>
+    <h2>Редагування</h2>
+</div>
 
 <hr />
 <form asp-action="Edit">
@@ -44,10 +46,6 @@
             <div class="form-group">
                 <input type="submit" value="Зберегти" class="btn btn-primary" />
             </div>
-            <div style="margin-top:20px;">
-                <a asp-action="Details" asp-route-id="@Model.Id">Назад</a>
-            </div>
-
         </div>
         <div class="col-md-6 col-md-6">
             <div class="form-group col-md-6" style="margin-bottom: 20px;">

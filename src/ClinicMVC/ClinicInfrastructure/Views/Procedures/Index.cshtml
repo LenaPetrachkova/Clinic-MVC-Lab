@@ -1,0 +1,111 @@
+﻿@model IEnumerable<ClinicDomain.Models.Procedure>
+
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div style="margin-top:20px; display: flex; align-items: center; ">
+    <a asp-area="" asp-controller="Home" asp-action="" class="image-button" style="position: absolute; left: 80px ; top: 14%; transform: translateY(-50%); z-index:4;"></a>
+    <h2>Список процедур</h2>
+</div>
+
+<div style="position: relative;">
+    <div class="d-flex align-items-center" style="margin-bottom:20px; margin-top:20px;">
+        <p class="me-2 mb-0">
+            <a asp-action="Create" class="btn btn-primary">Додати</a>
+        </p>
+        <form class="input-group mb-0 d-flex ms-auto justify-content-end">
+            <input class="form-control" name="searchString" style="max-width: 300px;" placeholder="Пошук" aria-describedby="button-addon2" value="@ViewBag.CurrentFilter">
+            <button class="btn btn-primary" type="submit" id="button-addon2">Знайти</button>
+        </form>
+    </div>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Код
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td style="text-align: right;">
+                    <a asp-area="" asp-controller="Procedures" asp-action="Edit" asp-route-id="@item.Id" class="edit-image-button" style="margin-right:20px;"></a>
+                    <a href="javascript:void(0)" onclick="openDeleteConfirmationModal('@item.Id')" class="delete-image-button"></a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+<div class="modal fade" id="deleteConfirmationModal" tabindex="-1" role="dialog" aria-labelledby="deleteConfirmationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteConfirmationModalLabel">Підтвердження видалення</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Ви впевнені, що хочете видалити процедуру?
+            </div>
+            <div class="modal-footer">
+                <form id="deleteForm" method="post">
+                    <input type="hidden" id="procedureId" name="id" />
+                    <button type="submit" class="btn btn-danger">Видалити</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    const deleteConfirmationModal = document.getElementById('deleteConfirmationModal')
+    const myInput = document.getElementById('myInput')
+
+    deleteConfirmationModal.addEventListener('shown.bs.modal', () => {
+        document.getElementById('procedureId').focus()
+    })
+
+    function openDeleteConfirmationModal(id) {
+        document.getElementById('procedureId').value = id;
+        $('#deleteConfirmationModal').modal('show');
+    }
+
+    document.getElementById('deleteForm').addEventListener('submit', function (event) {
+        event.preventDefault(); 
+
+        var formData = new FormData(this);
+
+        fetch('@Url.Action("Delete")', {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => {
+                if (response.ok) {
+                    $('#deleteConfirmationModal').modal('hide');
+                    location.reload();
+                } else {
+                }
+            })
+    });
+
+</script>
+

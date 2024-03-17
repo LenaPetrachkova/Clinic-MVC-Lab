@@ -5,9 +5,10 @@
 @{
     ViewData["Title"] = "Details";
 }
-
-<h3>Детальна інформація</h3>
-
+<div style="margin-top:20px; display: flex; align-items: center; ">
+    <a asp-area="" asp-controller="PatientCards" asp-action="Index" class="image-button" style="position: absolute; left: 80px ; top: 14%; transform: translateY(-50%); z-index:4;"></a>
+    <h2>Детальна інформація</h2>
+</div>
 <div>
     <hr />
     <dl class="row">
@@ -61,28 +62,16 @@
             @Html.DisplayFor(model => model.Diseases)
         </dd>
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Discount)
+            @Html.DisplayNameFor(model => model.Discount.SocialGroup)
         </dt>
         <dd class = "col-sm-10">
-            @{
-                if (Model.Discount.Id == 1)
-                {
-                    @:Без знижки
-                }
-                else
-                {
-                    @Html.DisplayFor(modelItem => Model.Discount.DiscountPercent)@:%
-                }
-            }
+            @Html.DisplayFor(model => model.Discount.SocialGroup)
         </dd>
     </dl>
 </div>
 <div style="margin-top:50px;">
-    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary" style="margin-right:30px;">Редагувати</a> |
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary" style="margin-right:30px;">Редагувати</a> 
     <a class="btn btn-danger" style="margin-left:30px;" data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal">Видалити</a>
-</div>
-<div style ="margin-top:20px;">
-    <a asp-action="Index">Назад</a>
 </div>
 
 <div class="modal fade" id="deleteConfirmationModal" tabindex="-1" role="dialog" aria-labelledby="deleteConfirmationModalLabel" aria-hidden="true">

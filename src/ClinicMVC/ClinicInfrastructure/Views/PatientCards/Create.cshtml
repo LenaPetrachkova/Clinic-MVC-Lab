@@ -4,7 +4,10 @@
     ViewData["Title"] = "Create";
 }
 
-<h3>Створення</h3>
+<div style="margin-top:20px; display: flex; align-items: center; ">
+    <a asp-area="" asp-controller="PatientCards" asp-action="Index" class="image-button" style="position: absolute; left: 80px ; top: 14%; transform: translateY(-50%); z-index:4;"></a>
+    <h2>Створення</h2>
+</div>
 <hr />
 
 <form asp-action="Create">
@@ -44,12 +47,11 @@
             <div class="form-group">
                 <input type="submit" value="Зберегти" class="btn btn-primary" />
             </div>
-
         </div>
         <div class="col-md-6 col-md-6">
             <div class="form-group col-md-6" style="margin-bottom: 20px;">
                 <label asp-for="AddInfo" class="control-label"></label>
-                <textarea asp-for="AddInfo" class="form-control" rows="4"></textarea>
+                <textarea asp-for="AddInfo" class="form-control" rows="4" style="resize: none;"></textarea>
                 <span asp-validation-for="AddInfo" class="text-danger"></span>
             </div>
             <div class="form-group col-md-6" style="margin-bottom: 20px;">
@@ -77,10 +79,6 @@
         </div>
     </div>
 </form>
-
-<div>
-    <a asp-action="Index">Назад</a>
-</div>
 
 @section Scripts {
     @{

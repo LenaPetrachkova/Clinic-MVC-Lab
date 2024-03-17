@@ -5,30 +5,6 @@
       "PackagePath": "staticwebassets\\ClinicInfrastructure.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\wwwroot\\css\\bootstrap.css",
-      "PackagePath": "staticwebassets\\css\\bootstrap.css"
-    },
-    {
-      "Id": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\wwwroot\\css\\bootstrap.min.css",
-      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
-    },
-    {
-      "Id": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\wwwroot\\css\\bootstrap_minty.css",
-      "PackagePath": "staticwebassets\\css\\bootstrap_minty.css"
-    },
-    {
-      "Id": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\wwwroot\\css\\bootstrap_minty.min.css",
-      "PackagePath": "staticwebassets\\css\\bootstrap_minty.min.css"
-    },
-    {
-      "Id": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\wwwroot\\css\\bootstrap_quartz.css",
-      "PackagePath": "staticwebassets\\css\\bootstrap_quartz.css"
-    },
-    {
-      "Id": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\wwwroot\\css\\bootstrap_quartz.min.css",
-      "PackagePath": "staticwebassets\\css\\bootstrap_quartz.min.css"
-    },
-    {
       "Id": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -37,56 +13,36 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\wwwroot\\images\\Background.png",
-      "PackagePath": "staticwebassets\\images\\Background.png"
-    },
-    {
-      "Id": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\wwwroot\\images\\Background1.png",
-      "PackagePath": "staticwebassets\\images\\Background1.png"
-    },
-    {
       "Id": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\wwwroot\\images\\Background2.png",
       "PackagePath": "staticwebassets\\images\\Background2.png"
     },
     {
-      "Id": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\wwwroot\\images\\Background3.png",
-      "PackagePath": "staticwebassets\\images\\Background3.png"
+      "Id": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\wwwroot\\images\\arrow-left-circle-fill.svg",
+      "PackagePath": "staticwebassets\\images\\arrow-left-circle-fill.svg"
     },
     {
-      "Id": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\wwwroot\\images\\Background4.png",
-      "PackagePath": "staticwebassets\\images\\Background4.png"
-    },
-    {
-      "Id": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\wwwroot\\images\\Background5.png",
-      "PackagePath": "staticwebassets\\images\\Background5.png"
-    },
-    {
-      "Id": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\wwwroot\\images\\boxes.svg",
-      "PackagePath": "staticwebassets\\images\\boxes.svg"
-    },
-    {
-      "Id": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\wwwroot\\images\\list.svg",
-      "PackagePath": "staticwebassets\\images\\list.svg"
+      "Id": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\wwwroot\\images\\icons8-info.svg",
+      "PackagePath": "staticwebassets\\images\\icons8-info.svg"
     },
     {
       "Id": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\wwwroot\\images\\list1.svg",
       "PackagePath": "staticwebassets\\images\\list1.svg"
     },
     {
-      "Id": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\wwwroot\\images\\patient.svg",
-      "PackagePath": "staticwebassets\\images\\patient.svg"
-    },
-    {
       "Id": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\wwwroot\\images\\patient2.svg",
       "PackagePath": "staticwebassets\\images\\patient2.svg"
     },
     {
-      "Id": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\wwwroot\\images\\price.svg",
-      "PackagePath": "staticwebassets\\images\\price.svg"
+      "Id": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\wwwroot\\images\\pencil.svg",
+      "PackagePath": "staticwebassets\\images\\pencil.svg"
     },
     {
       "Id": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\wwwroot\\images\\price1.svg",
       "PackagePath": "staticwebassets\\images\\price1.svg"
+    },
+    {
+      "Id": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\wwwroot\\images\\trash3.svg",
+      "PackagePath": "staticwebassets\\images\\trash3.svg"
     },
     {
       "Id": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\wwwroot\\js\\site.js",
@@ -223,6 +179,14 @@
     {
       "Id": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap_flatly.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap_flatly.css"
+    },
+    {
+      "Id": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap_flatly.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap_flatly.min.css"
     },
     {
       "Id": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",

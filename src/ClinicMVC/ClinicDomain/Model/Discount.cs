@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace ClinicDomain.Models;
+namespace ClinicDomain.Model;
 
 public partial class Discount
 {

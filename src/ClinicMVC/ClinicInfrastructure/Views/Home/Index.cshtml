@@ -11,6 +11,22 @@
         background-repeat: no-repeat;
     }
 </style>
+
+@if (User.Identity.IsAuthenticated)
+{
+    <p>@User.Identity.Name</p>
+
+    <form method="post" asp-controller="Account" asp-action="Logout">
+        <input type="submit" value="Вихід" />
+    </form>
+}
+else
+{
+    <a asp-controller="Account" asp-action="Login">Вхід</a>
+    <a asp-controller="Account" asp-action="Register">Реєстація</a>
+}
+
+
 <div class="row" style="margin-top:60px;">
     <div class="col-sm-3 mx-auto my-auto">
         <div class="card bg-primary text-white custom-rounded-card">
@@ -22,7 +38,7 @@
                 <hr />
                 <p class="card-text">Записи відвідувань пацієнтів</p>
                 <div class="d-flex justify-content-center">
-                    <a href="" class="btn btn-light">Перейти</a>
+                    <a asp-area="" asp-controller="Appointments" asp-action="" class="btn btn-light">Перейти</a>
                 </div>
             </div>
         </div>

@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using ClinicDomain.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace ClinicInfrastructure;
+namespace ClinicDomain.Model;
 
 public partial class ClinicContext : DbContext
 {
@@ -18,60 +17,49 @@ public partial class ClinicContext : DbContext
 
     public virtual DbSet<Appointment> Appointments { get; set; }
 
-    public virtual DbSet<AppointmentProcedure> AppointmentProcedures { get; set; }
-
     public virtual DbSet<Clinic> Clinics { get; set; }
 
     public virtual DbSet<Discount> Discounts { get; set; }
+
+    public virtual DbSet<Doctor> Doctors { get; set; }
 
     public virtual DbSet<PatientCard> PatientCards { get; set; }
 
     public virtual DbSet<Procedure> Procedures { get; set; }
 
-    public virtual DbSet<User> Users { get; set; }
-
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=User-PC\\SQLEXPRESS; Database=Clinic; Trusted_Connection=True; TrustServerCertificate=True; ");
+        => optionsBuilder.UseSqlServer("Server=USER-PC\\SQLEXPRESS; Database=Clinic; Trusted_Connection=True; TrustServerCertificate=True;");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Appointment>(entity =>
         {
+            entity.Property(e => e.ClinicId).HasColumnName("Clinic_id");
+            entity.Property(e => e.DoctorId).HasColumnName("Doctor_id");
             entity.Property(e => e.EndTime).HasColumnName("End_time");
             entity.Property(e => e.PatientId).HasColumnName("Patient_id");
+            entity.Property(e => e.ProceduresId).HasColumnName("Procedures_id");
             entity.Property(e => e.StartTime).HasColumnName("Start_time");
+
+            entity.HasOne(d => d.Clinic).WithMany(p => p.Appointments)
+                .HasForeignKey(d => d.ClinicId)
+                .HasConstraintName("FK_Appointments_Clinic");
+
+            entity.HasOne(d => d.Doctor).WithMany(p => p.Appointments)
+                .HasForeignKey(d => d.DoctorId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Appointments_Doctors");
 
             entity.HasOne(d => d.Patient).WithMany(p => p.Appointments)
                 .HasForeignKey(d => d.PatientId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Appointments_Patient_cards");
-        });
 
-        modelBuilder.Entity<AppointmentProcedure>(entity =>
-        {
-            entity.HasKey(e => e.Id).HasName("PK_Appointmnet_procedures");
-
-            entity.ToTable("Appointment_procedures");
-
-            entity.Property(e => e.AppointmentId).HasColumnName("Appointment_id");
-            entity.Property(e => e.ProceduresId).HasColumnName("Procedures_id");
-            entity.Property(e => e.UserId).HasColumnName("User_id");
-
-            entity.HasOne(d => d.Appointment).WithMany(p => p.AppointmentProcedures)
-                .HasForeignKey(d => d.AppointmentId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Appointmnet_procedures_Appointments");
-
-            entity.HasOne(d => d.Procedures).WithMany(p => p.AppointmentProcedures)
+            entity.HasOne(d => d.Procedures).WithMany(p => p.Appointments)
                 .HasForeignKey(d => d.ProceduresId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Appointmnet_procedures_Procedures");
-
-            entity.HasOne(d => d.User).WithMany(p => p.AppointmentProcedures)
-                .HasForeignKey(d => d.UserId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Appointmnet_procedures_Users");
+                .HasConstraintName("FK_Appointments_Procedures");
         });
 
         modelBuilder.Entity<Clinic>(entity =>
@@ -101,6 +89,28 @@ public partial class ClinicContext : DbContext
                 .HasColumnName("Social_group");
         });
 
+        modelBuilder.Entity<Doctor>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK_Doctors_1");
+
+            entity.Property(e => e.ClinicId).HasColumnName("Clinic_id");
+            entity.Property(e => e.Email)
+                .HasMaxLength(50)
+                .IsUnicode(false);
+            entity.Property(e => e.FatherName).HasMaxLength(50);
+            entity.Property(e => e.FirstName).HasMaxLength(50);
+            entity.Property(e => e.LastName).HasMaxLength(50);
+            entity.Property(e => e.PhoneNumber)
+                .HasMaxLength(10)
+                .IsUnicode(false)
+                .IsFixedLength();
+
+            entity.HasOne(d => d.Clinic).WithMany(p => p.Doctors)
+                .HasForeignKey(d => d.ClinicId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Doctors_Clinic");
+        });
+
         modelBuilder.Entity<PatientCard>(entity =>
         {
             entity.ToTable("Patient_cards");
@@ -110,6 +120,7 @@ public partial class ClinicContext : DbContext
             entity.Property(e => e.ChronicDisease)
                 .HasMaxLength(50)
                 .HasColumnName("Chronic_disease");
+            entity.Property(e => e.ClinicId).HasColumnName("Clinic_id");
             entity.Property(e => e.DateOfBirth).HasColumnName("Date_of_birth");
             entity.Property(e => e.DiscountId).HasColumnName("Discount_id");
             entity.Property(e => e.Diseases).HasMaxLength(50);
@@ -128,6 +139,10 @@ public partial class ClinicContext : DbContext
                 .IsFixedLength()
                 .HasColumnName("Phone_number");
 
+            entity.HasOne(d => d.Clinic).WithMany(p => p.PatientCards)
+                .HasForeignKey(d => d.ClinicId)
+                .HasConstraintName("FK_Patient_cards_Clinic");
+
             entity.HasOne(d => d.Discount).WithMany(p => p.PatientCards)
                 .HasForeignKey(d => d.DiscountId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
@@ -143,24 +158,6 @@ public partial class ClinicContext : DbContext
                 .HasForeignKey(d => d.ClinicId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Procedures_Clinic");
-        });
-
-        modelBuilder.Entity<User>(entity =>
-        {
-            entity.Property(e => e.ClinicId).HasColumnName("Clinic_id");
-            entity.Property(e => e.Email)
-                .HasMaxLength(50)
-                .IsUnicode(false);
-            entity.Property(e => e.PhoneNumber)
-                .HasMaxLength(10)
-                .IsUnicode(false)
-                .IsFixedLength()
-                .HasColumnName("Phone_number");
-
-            entity.HasOne(d => d.Clinic).WithMany(p => p.Users)
-                .HasForeignKey(d => d.ClinicId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Users_Clinic");
         });
 
         OnModelCreatingPartial(modelBuilder);

@@ -1,0 +1,69 @@
+﻿@model IEnumerable<ClinicDomain.Model.Appointment>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div style="margin-top: 20px; position: relative;">
+    <a asp-area="" asp-controller="Home" asp-action="" class="image-button" style="position: absolute; left: -40px; top: 50%; transform: translateY(-50%);"></a>
+    <h2>Графік відвідування</h2>
+</div>
+
+<p class="me-2 mb-0">
+    <a asp-action="Create" class="btn btn-primary" style="margin-bottom:20px; margin-top:20px;">Додати</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StartTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EndTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Doctor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Patient)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Procedures)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StartTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EndTime)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.Doctor.LastName) @Html.DisplayFor(modelItem => item.Doctor.FirstName) @Html.DisplayFor(modelItem => item.Doctor.FatherName)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.Patient.LastName) @Html.DisplayFor(modelItem => item.Patient.FirstName) @Html.DisplayFor(modelItem => item.Patient.FatherName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Procedures.Name)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

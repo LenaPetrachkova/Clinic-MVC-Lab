@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace ClinicDomain.Models;
+namespace ClinicDomain.Model;
 
 public partial class Procedure
 {
@@ -16,7 +16,7 @@ public partial class Procedure
 
     public int ClinicId { get; set; }
 
-    public virtual ICollection<AppointmentProcedure> AppointmentProcedures { get; set; } = new List<AppointmentProcedure>();
+    public virtual ICollection<Appointment> Appointments { get; set; } = new List<Appointment>();
 
     public virtual Clinic Clinic { get; set; } = null!;
 }

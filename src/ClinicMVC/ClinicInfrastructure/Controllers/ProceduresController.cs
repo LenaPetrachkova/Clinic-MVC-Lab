@@ -5,37 +5,55 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using ClinicDomain.Models;
 using ClinicInfrastructure;
+using X.PagedList;
+using ClinicDomain.Model;
+using Microsoft.AspNetCore.Identity;
 
 namespace ClinicInfrastructure.Controllers
 {
     public class ProceduresController : Controller
     {
         private readonly ClinicContext _context;
+        private readonly UserManager<User> _userManager;
 
-        public ProceduresController(ClinicContext context)
+        public ProceduresController(ClinicContext context, UserManager<User> userManager)
         {
             _context = context;
+            _userManager = userManager;
         }
 
         // GET: Procedures
-        public async Task<IActionResult> Index(string searchString)
+        public async Task<IActionResult> Index(string searchString, int? page)
         {
-            var clinicContext = _context.Procedures.AsQueryable();
+            var currentUser = await _userManager.GetUserAsync(User);
+
+            if (currentUser == null)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
+            var currentClinicId = currentUser.ClinicId;
+
+            var clinicContext = _context.Procedures
+                .Where(p => p.ClinicId == currentClinicId);
 
             if (!string.IsNullOrEmpty(searchString))
             {
+                
                 clinicContext = clinicContext
-                    .Include(p => p.Clinic)
                     .Where(p =>
-                        p.Id.Equals(searchString) ||
+                        p.Id.ToString().Contains(searchString) ||
                         p.Name.Contains(searchString) ||
-                        p.Price.Equals(searchString)
+                        p.Price.ToString().Contains(searchString)
                     );
             }
+            
+            var procedures = await clinicContext.ToListAsync();
 
-            return View(await clinicContext.ToListAsync());
+            int pageSize = 10;
+            int pageNumber = (page ?? 1);
+            return View(procedures.ToPagedList(pageNumber, pageSize));
         }
 
         // GET: Procedures/Details/5
@@ -56,19 +74,17 @@ namespace ClinicInfrastructure.Controllers
 
             return View(procedure);
         }
-        private int GetCurrentClinicId()
-        {
-            return 1;
-        }
 
         // GET: Procedures/Create
-        public IActionResult Create()
-        {   
+        public async Task<IActionResult> Create()
+        {
+            var currentUser = await _userManager.GetUserAsync(User);
+            if (currentUser == null)
+            {
+                return RedirectToAction("Login", "Account"); 
+            }
 
-            ViewData["ClinicId"] = new SelectList(_context.Clinics, "Id", "Address");
-    
-            int currentClinicId = GetCurrentClinicId();
-            ViewBag.CurrentClinicId = currentClinicId;
+            ViewData["ClinicId"] = new SelectList(_context.Clinics, "Id", "Address", currentUser.ClinicId);
             return View();
         }
 
@@ -79,7 +95,16 @@ namespace ClinicInfrastructure.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Name,Price,ClinicId")] Procedure procedure)
         {
+            var currentUser = await _userManager.GetUserAsync(User);
+            if (currentUser == null)
+            {
+                return RedirectToAction("Login", "Account"); 
+            }
+
+            procedure.ClinicId = currentUser.ClinicId;
+
             ModelState.Remove("Clinic");
+            ModelState.Remove("ClinicId");
             if (ModelState.IsValid)
             {
                 _context.Add(procedure);
@@ -120,23 +145,12 @@ namespace ClinicInfrastructure.Controllers
             }
 
             ModelState.Remove("Clinic");
-            ModelState.Remove("ClinicId");
-
             if (ModelState.IsValid)
             {
-                // Перевірка існування клініки з вказаним ClinicId
-                if (!_context.Clinics.Any(c => c.Id == procedure.ClinicId))
-                {
-                    ModelState.AddModelError("ClinicId", "Клініка з вказаним ідентифікатором не існує.");
-                    ViewData["ClinicId"] = new SelectList(_context.Clinics, "Id", "Address", procedure.ClinicId);
-                    return View(procedure);
-                }
-
                 try
                 {
                     _context.Update(procedure);
                     await _context.SaveChangesAsync();
-                    return RedirectToAction(nameof(Index));
                 }
                 catch (DbUpdateConcurrencyException)
                 {
@@ -149,11 +163,13 @@ namespace ClinicInfrastructure.Controllers
                         throw;
                     }
                 }
+                return RedirectToAction(nameof(Index));
             }
 
             ViewData["ClinicId"] = new SelectList(_context.Clinics, "Id", "Address", procedure.ClinicId);
             return View(procedure);
         }
+
 
         // GET: Procedures/Delete/5
         public async Task<IActionResult> Delete(int? id)

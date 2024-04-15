@@ -1,50 +1,78 @@
-﻿using System;
+﻿
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using ClinicDomain.Models;
 using ClinicInfrastructure;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using ClinicDomain;
+using X.PagedList;
+using ClinicDomain.Model;
+using Microsoft.AspNetCore.Identity;
 
 namespace ClinicInfrastructure.Controllers
 {
     public class PatientCardsController : Controller
     {
         private readonly ClinicContext _context;
+        private readonly UserManager<User> _userManager;
 
-        public PatientCardsController(ClinicContext context)
+        public PatientCardsController(ClinicContext context, UserManager<User> userManager)
         {
             _context = context;
+            _userManager = userManager;
         }
 
+
         // GET: PatientCards
-        public async Task<IActionResult> Index(string searchString)
+
+        public async Task<IActionResult> Index(string searchString, int? page)
         {
-            var clinicContext = _context.PatientCards.AsQueryable(); 
+            var currentUser = await _userManager.GetUserAsync(User);
+            var currentClinicId = currentUser.ClinicId;
+            var clinicContext = _context.PatientCards
+               .Where(p => p.ClinicId == currentClinicId);
 
             if (!string.IsNullOrEmpty(searchString))
             {
-                clinicContext = clinicContext
-                    .Include(p => p.Discount)
-                    .Where(p =>
-                        p.FirstName.Contains(searchString) ||
-                        p.LastName.Contains(searchString) ||
-                        p.FatherName.Contains(searchString) ||
-                        p.PhoneNumber.Contains(searchString) ||
-                        p.Id.Equals(searchString)
-                    );
+                if (int.TryParse(searchString, out int id))
+                {
+                    clinicContext = clinicContext
+                        .Include(p => p.Discount)
+                        .Where(p =>
+                            p.Id == id ||
+                            p.FirstName.Contains(searchString) ||
+                            p.LastName.Contains(searchString) ||
+                            p.FatherName.Contains(searchString) ||
+                            p.PhoneNumber.Contains(searchString)
+                        );
+                }
+                else
+                {
+                    clinicContext = clinicContext
+                        .Include(p => p.Discount)
+                        .Where(p =>
+                            p.FirstName.Contains(searchString) ||
+                            p.LastName.Contains(searchString) ||
+                            p.FatherName.Contains(searchString) ||
+                            p.PhoneNumber.Contains(searchString)
+                        );
+                }
             }
             else
             {
                 clinicContext = clinicContext.Include(p => p.Discount);
             }
 
-            return View(await clinicContext.ToListAsync());
+            var patients = await clinicContext.ToListAsync();
+
+            int pageSize = 10;
+            int pageNumber = (page ?? 1);
+            return View(patients.ToPagedList(pageNumber, pageSize));
         }
+
 
         // GET: PatientCards/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -66,17 +94,32 @@ namespace ClinicInfrastructure.Controllers
         }
 
         // GET: PatientCards/Create
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
+            var currentUser = await _userManager.GetUserAsync(User);
+            if (currentUser == null)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
             ViewData["DiscountId"] = new SelectList(_context.Discounts, "Id", "SocialGroup");
             return View();
         }
+
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("FirstName,LastName,FatherName,PhoneNumber,DateOfBirth,AddInfo,Allergy,ChronicDisease,Diseases,DiscountId,Id")] PatientCard patientCard)
         {
+            var currentUser = await _userManager.GetUserAsync(User);
+            if (currentUser == null)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
+            patientCard.ClinicId = currentUser.ClinicId;
+
             ModelState.Remove("Discount");
             if (ModelState.IsValid)
             {
@@ -105,9 +148,6 @@ namespace ClinicInfrastructure.Controllers
             return View(patientCard);
         }
 
-        // POST: PatientCards/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("FirstName,LastName,FatherName,PhoneNumber,DateOfBirth,AddInfo,Allergy,ChronicDisease,Diseases,DiscountId,Id")] PatientCard patientCard)
@@ -116,6 +156,14 @@ namespace ClinicInfrastructure.Controllers
             {
                 return NotFound();
             }
+
+            var currentUser = await _userManager.GetUserAsync(User);
+            if (currentUser == null)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
+            patientCard.ClinicId = currentUser.ClinicId;
 
             ModelState.Remove("Discount");
             if (ModelState.IsValid)
@@ -141,6 +189,7 @@ namespace ClinicInfrastructure.Controllers
             ViewData["DiscountId"] = new SelectList(_context.Discounts, "Id", "SocialGroup", patientCard.DiscountId);
             return View(patientCard);
         }
+
 
         // GET: PatientCards/Delete/5
         public async Task<IActionResult> Delete(int? id)
@@ -168,16 +217,11 @@ namespace ClinicInfrastructure.Controllers
         {
             var patientCard = await _context.PatientCards
                 .Include(p => p.Appointments)
-                    .ThenInclude(a => a.AppointmentProcedures)
                 .FirstOrDefaultAsync(m => m.Id == id);
 
             if (patientCard == null)
             {
                 return NotFound();
-            }
-            foreach (var appointment in patientCard.Appointments)
-            {
-                _context.AppointmentProcedures.RemoveRange(appointment.AppointmentProcedures);
             }
 
             _context.Appointments.RemoveRange(patientCard.Appointments);

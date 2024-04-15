@@ -1,0 +1,29 @@
+﻿@model IEnumerable<ClinicDomain.Model.Clinic>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<style>
+    body {
+        margin-bottom: 60px;
+        background-image: url('/images/clinic_back1.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+</style>
+
+
+<div style="text-align: left; padding-right:600px; margin-top:60px;">
+    <h3><span style="color: #2d3e50;">Med</span><span style="color: #1ec1a2;">Admin</span> - це інноваційна платформа для адміністрування лікарень.</h3>
+    <p></p>
+    <h4>Наш сервіс призначений для оптимізації та полегшення рутинних завдань у керуванні медичними закладами.</h4>
+</div>
+
+<a asp-action="Create" class="btn btn-primary btn-lg" style="margin-top:40px;">Зареєструвати лікарню</a>
+<p>
+    <a asp-area="" asp-controller="Account" asp-action="Login" class="btn btn-success btn-lg" style="margin-top:20px;">Увійти</a>
+</p>
+
+
+

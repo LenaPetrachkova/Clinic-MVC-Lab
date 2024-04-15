@@ -1,84 +1,98 @@
-﻿@model ClinicDomain.Models.PatientCard
+﻿@model ClinicDomain.Model.PatientCard
 
 @{
     ViewData["Title"] = "Edit";
 }
-<div style="margin-top:20px; display: flex; align-items: center; ">
-    <a asp-area="" asp-controller="PatientCards" asp-action="Details" asp-route-id="@Model.Id" class="image-button" style="position: absolute; left: 80px ; top: 14%; transform: translateY(-50%); z-index:4;"></a>
+
+<div style="margin-top: 20px; position: relative;">
+    <a asp-area="" asp-controller="PatientCards" asp-action="Details" asp-route-id="@Model.Id" class="image-button" style="position: absolute; left: -40px; top: 50%; transform: translateY(-50%);"></a>
     <h2>Редагування</h2>
 </div>
 
-<hr />
-<form asp-action="Edit">
-    <div class="row">
-        <div class="col-md-6">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group col-md-6" style="margin-bottom: 20px;">
-                <label asp-for="LastName" class="control-label"></label>
-                <input asp-for="LastName" class="form-control" />
-                <span asp-validation-for="LastName" class="text-danger"></span>
+<div class="card border-primary mb-3" style="margin-top: 20px;">
+    <form asp-action="Edit">
+        <div class="card-body row">
+            <div class="col-md-6">
+                <div class="input-group mb-3" style=" height: 50px; margin-top:15px;">
+                    <span class="input-group-text" style="width:200px;">
+                        @Html.DisplayNameFor(model => model.LastName)
+                    </span>
+                    <input asp-for="LastName" class="form-control" />
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+                <div class="input-group mb-3" style=" height: 50px; margin-top:30px;">
+                    <span class="input-group-text" style="width:200px;">
+                        @Html.DisplayNameFor(model => model.FirstName)
+                    </span>
+                    <input asp-for="FirstName" class="form-control" />
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+                <div class="input-group mb-3" style=" height: 50px; margin-top:30px;">
+                    <span class="input-group-text" style="width:200px;">
+                        @Html.DisplayNameFor(model => model.FatherName)
+                    </span>
+                    <input asp-for="FatherName" class="form-control" />
+                    <span asp-validation-for="FatherName" class="text-danger"></span>
+                </div>
+                <div class="input-group mb-3" style=" height: 50px; margin-top:30px;">
+                    <span class="input-group-text" style="width:200px;">
+                        @Html.DisplayNameFor(model => model.PhoneNumber)
+                    </span>
+                    <input asp-for="PhoneNumber" class="form-control" />
+                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                </div>
+                <div class="input-group mb-3" style=" height: 50px; margin-top:30px;">
+                    <span class="input-group-text" style="width:200px;">
+                        @Html.DisplayNameFor(model => model.DateOfBirth)
+                    </span>
+                    <input asp-for="DateOfBirth" class="form-control datepicker" />
+                    <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+                </div>
             </div>
-
-            <div class="form-group col-md-6" style="margin-bottom: 20px;">
-                <label asp-for="FirstName" class="control-label"></label>
-                <input asp-for="FirstName" class="form-control" />
-                <span asp-validation-for="FirstName" class="text-danger"></span>
+            <div class="col-md-6">
+                <div class="input-group mb-3" style=" height: 131px; margin-top:15px;">
+                    <span class="input-group-text" style="width:200px;">
+                        @Html.DisplayNameFor(model => model.AddInfo)
+                    </span>
+                    <textarea asp-for="AddInfo" class="form-control" rows="4" style="resize: none;"></textarea>
+                    <span asp-validation-for="AddInfo" class="text-danger"></span>
+                </div>
+                <div class="input-group mb-3" style=" height: 50px; margin-top:30px;">
+                    <span class="input-group-text" style="width:200px;">
+                        @Html.DisplayNameFor(model => model.Allergy)
+                    </span>
+                    <input asp-for="Allergy" class="form-control" />
+                    <span asp-validation-for="Allergy" class="text-danger"></span>
+                </div>
+                <div class="input-group mb-3" style=" height: 50px; margin-top:30px;">
+                    <span class="input-group-text" style="width:200px;">
+                        @Html.DisplayNameFor(model => model.ChronicDisease)
+                    </span>
+                    <input asp-for="ChronicDisease" class="form-control" />
+                    <span asp-validation-for="ChronicDisease" class="text-danger"></span>
+                </div>
+                <div class="input-group mb-3" style=" height: 50px; margin-top:30px;">
+                    <span class="input-group-text" style="width:200px;">
+                        @Html.DisplayNameFor(model => model.Diseases)
+                    </span>
+                    <input asp-for="Diseases" class="form-control" />
+                    <span asp-validation-for="Diseases" class="text-danger"></span>
+                </div>
+                <div class="input-group mb-3" style=" height: 50px; margin-top:30px;">
+                    <span class="input-group-text" style="width:200px;">
+                        @Html.DisplayNameFor(model => model.DiscountId)
+                    </span>
+                    <select asp-for="DiscountId" class="form-control" asp-items="ViewBag.DiscountId"></select>
+                </div>
             </div>
-
-            <div class="form-group col-md-6" style="margin-bottom: 20px;">
-                <label asp-for="FatherName" class="control-label"></label>
-                <input asp-for="FatherName" class="form-control" />
-                <span asp-validation-for="FatherName" class="text-danger"></span>
-            </div>
-
-            <div class="form-group col-md-6" style="margin-bottom: 20px;">
-                <label asp-for="PhoneNumber" class="control-label"></label>
-                <input asp-for="PhoneNumber" class="form-control" />
-                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
-            </div>
-
-            <div class="form-group col-md-6" style="margin-bottom: 40px;">
-                <label asp-for="DateOfBirth" class="control-label"></label>
-                <input asp-for="DateOfBirth" class="form-control datepicker" />
-                <span asp-validation-for="DateOfBirth" class="text-danger"></span>
-            </div>
-
+        </div>
+        <div class="card-footer text-body-secondary d-flex align-items-center justify-content-center" style="height: 70px;">
             <div class="form-group">
-                <input type="submit" value="Зберегти" class="btn btn-primary" />
+                <button type="submit" class="btn btn-primary">Зберегти</button>
             </div>
         </div>
-        <div class="col-md-6 col-md-6">
-            <div class="form-group col-md-6" style="margin-bottom: 20px;">
-                <label asp-for="AddInfo" class="control-label"></label>
-                <textarea asp-for="AddInfo" class="form-control" rows="4" style="resize: none;"></textarea>
-                <span asp-validation-for="AddInfo" class="text-danger"></span>
-            </div>
-            <div class="form-group col-md-6" style="margin-bottom: 20px;">
-                <label asp-for="Allergy" class="control-label"></label>
-                <input asp-for="Allergy" class="form-control" />
-                <span asp-validation-for="Allergy" class="text-danger"></span>
-            </div>
-
-            <div class="form-group col-md-6" style="margin-bottom: 20px;">
-                <label asp-for="ChronicDisease" class="control-label"></label>
-                <input asp-for="ChronicDisease" class="form-control" />
-                <span asp-validation-for="ChronicDisease" class="text-danger"></span>
-            </div>
-
-            <div class="form-group col-md-6" style="margin-bottom: 20px;">
-                <label asp-for="Diseases" class="control-label"></label>
-                <input asp-for="Diseases" class="form-control" />
-                <span asp-validation-for="Diseases" class="text-danger"></span>
-            </div>
-
-            <div class="form-group col-md-6" style="margin-bottom: 20px;">
-                <label asp-for="DiscountId" class="control-label"></label>
-                <select asp-for="DiscountId" class="form-control" asp-items="ViewBag.DiscountId"></select>
-            </div>
-        </div>
-    </div>
-</form>
-
+    </form>
+</div>
 
 @section Scripts {
     @{

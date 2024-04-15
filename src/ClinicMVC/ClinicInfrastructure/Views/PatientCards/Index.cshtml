@@ -1,12 +1,15 @@
-﻿@model IEnumerable<ClinicDomain.Models.PatientCard>
+﻿@model X.PagedList.IPagedList<ClinicDomain.Model.PatientCard>
+@using X.PagedList.Mvc.Core
+
 
 @{
     ViewData["Title"] = "Index";
 }
-<div style="margin-top:20px; display: flex; align-items: center; ">
-    <a asp-area="" asp-controller="Home" asp-action="" class="image-button" style="position: absolute; left: 80px ; top: 14%; transform: translateY(-50%); z-index:4;"></a>
+<div style="margin-top: 20px; position: relative;">
+    <a asp-area="" asp-controller="Home" asp-action="" class="image-button" style="position: absolute; left: -40px; top: 50%; transform: translateY(-50%);"></a>
     <h2>Пацієнти</h2>
 </div>
+
 
 <div style="position: relative;">
     <div class="d-flex align-items-center" style="margin-bottom:20px; margin-top:20px;">
@@ -19,20 +22,20 @@
         </form>
     </div>
  </div>
-<table class="table">
+<table class="table table-hover">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Id)
+                № картки
             </th>
             <th>
                 ПІБ
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.PhoneNumber)
+                Номер телефону
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Discount)
+                Знижка
             </th>
             <th></th>
         </tr>
@@ -67,3 +70,26 @@
 }
     </tbody>
 </table>
+
+<div class="pagination-container">
+    <div class="pagination">
+        @Html.PagedListPager(Model, page => Url.Action("Index", new { page, searchString = ViewBag.CurrentFilter }),
+                new PagedListRenderOptions
+        {
+            LiElementClasses = new[] { "page-item" },
+            PageClasses = new[] { "page-link" },
+            UlElementClasses = new[] { "pagination", "pagination-sm" },
+            DisplayLinkToFirstPage = PagedListDisplayMode.IfNeeded,
+            DisplayLinkToLastPage = PagedListDisplayMode.IfNeeded,
+            DisplayLinkToPreviousPage = PagedListDisplayMode.Always,
+            DisplayLinkToNextPage = PagedListDisplayMode.Always,
+            DisplayPageCountAndCurrentLocation = false,
+            DisplayEllipsesWhenNotShowingAllPageNumbers = false
+        })
+    </div>
+</div>
+
+
+
+
+

@@ -1,0 +1,33 @@
+﻿@model ClinicInfrastructure.ViewModel.RegisterViewModel
+
+
+@{
+    ViewData["Title"] = "Register";
+    int clinicId = Convert.ToInt32(ViewBag.ClinicId);
+}
+
+<h2>Реєстрація нового користувача</h2>
+<form method="post" asp-controller="Account" asp-action="Register" asp-route-clinicId="@clinicId">
+    <div asp-validation-summary="ModelOnly"></div>
+    <div>
+        <label asp-for="Email"></label><br />
+        <input asp-for="Email" />
+        <span asp-validation-for="Email"></span>
+    </div>
+    <div>
+        <label asp-for="Password"></label><br />
+        <input asp-for="Password" />
+        <span asp-validation-for="Password"></span>
+    </div>
+    <div>
+        <label asp-for="ConfirmPassword"></label><br />
+        <input asp-for="ConfirmPassword" />
+        <span asp-validation-for="ConfirmPassword"></span>
+    </div>
+    <input type="hidden" asp-for="ClinicId" value="@ViewBag.ClinicId" />
+    <div>
+        <input type="submit" value="Реєстрація" />
+    </div>
+</form>
+
+

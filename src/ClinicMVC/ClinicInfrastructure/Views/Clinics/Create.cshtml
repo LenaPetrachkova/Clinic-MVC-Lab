@@ -1,0 +1,51 @@
+﻿@model ClinicDomain.Model.Clinic
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2 style="text-align: center; margin-top:60px;">Реєстрація</h2>
+
+<div class="row" style="justify-content:center;">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group" style="margin-top:20px;">
+                <label asp-for="Name" class="control-label" style="font-size: 20px;"></label>
+                <input asp-for="Name" class="form-control" style="height:45px;"/>
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class="form-group" style="margin-top:20px;">
+                <label asp-for="Specialization" class="control-label" style="font-size: 20px;"></label>
+                <input asp-for="Specialization" class="form-control" style="height:45px;" />
+                <span asp-validation-for="Specialization" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="margin-top:20px;">
+                <label asp-for="Address" class="control-label" style="font-size: 20px;"></label>
+                <input asp-for="Address" class="form-control" style="height:45px;" />
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="margin-top:20px;">
+                <label asp-for="PhoneNumber" class="control-label" style="font-size: 20px;"></label>
+                <div class="input-group">
+                    <div class="input-group-prepend" >
+                        <div class="input-group-text" style="height:45px;">+38</div>
+                    </div>
+                    <input type="text" class="form-control" id="autoSizingInputGroup" style="height:45px;" asp-for="PhoneNumber" />
+                </div>
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="margin-top:20px;">
+                <label asp-for="Email" class="control-label" style="font-size: 20px;"></label>
+                <input asp-for="Email" class="form-control" style="height:45px;" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="margin-top:30px; text-align: center;">
+                <input type="submit" value="Зареєструвати" class="btn btn-primary btn-lg" />
+            </div>
+            <input type="hidden" asp-for="Id" />
+        </form>
+    </div>
+</div>
+

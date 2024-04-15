@@ -3,20 +3,92 @@
   "WorkspaceRootPath": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|c:\\users\\professional\\desktop\\lab1\\src\\clinicmvc\\clinicinfrastructure\\views\\procedures\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|solutionrelative:clinicinfrastructure\\views\\procedures\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{FA2DDEA6-F0EB-4D6C-975F-321E275B182F}|ClinicDomain\\ClinicDomain.csproj|c:\\users\\professional\\desktop\\lab1\\src\\clinicmvc\\clinicdomain\\model\\patientcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA2DDEA6-F0EB-4D6C-975F-321E275B182F}|ClinicDomain\\ClinicDomain.csproj|solutionrelative:clinicdomain\\model\\patientcard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|c:\\users\\professional\\desktop\\lab1\\src\\clinicmvc\\clinicinfrastructure\\controllers\\procedurescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|solutionrelative:clinicinfrastructure\\controllers\\procedurescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FA2DDEA6-F0EB-4D6C-975F-321E275B182F}|ClinicDomain\\ClinicDomain.csproj|c:\\users\\professional\\desktop\\lab1\\src\\clinicmvc\\clinicdomain\\model\\discount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA2DDEA6-F0EB-4D6C-975F-321E275B182F}|ClinicDomain\\ClinicDomain.csproj|solutionrelative:clinicdomain\\model\\discount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA2DDEA6-F0EB-4D6C-975F-321E275B182F}|ClinicDomain\\ClinicDomain.csproj|c:\\users\\professional\\desktop\\lab1\\src\\clinicmvc\\clinicdomain\\model\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA2DDEA6-F0EB-4D6C-975F-321E275B182F}|ClinicDomain\\ClinicDomain.csproj|solutionrelative:clinicdomain\\model\\appointment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA2DDEA6-F0EB-4D6C-975F-321E275B182F}|ClinicDomain\\ClinicDomain.csproj|c:\\users\\professional\\desktop\\lab1\\src\\clinicmvc\\clinicdomain\\model\\procedure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA2DDEA6-F0EB-4D6C-975F-321E275B182F}|ClinicDomain\\ClinicDomain.csproj|solutionrelative:clinicdomain\\model\\procedure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA2DDEA6-F0EB-4D6C-975F-321E275B182F}|ClinicDomain\\ClinicDomain.csproj|c:\\users\\professional\\desktop\\lab1\\src\\clinicmvc\\clinicdomain\\model\\clinic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA2DDEA6-F0EB-4D6C-975F-321E275B182F}|ClinicDomain\\ClinicDomain.csproj|solutionrelative:clinicdomain\\model\\clinic.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|c:\\users\\professional\\desktop\\lab1\\src\\clinicmvc\\clinicinfrastructure\\roleinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|solutionrelative:clinicinfrastructure\\roleinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA2DDEA6-F0EB-4D6C-975F-321E275B182F}|ClinicDomain\\ClinicDomain.csproj|c:\\users\\professional\\desktop\\lab1\\src\\clinicmvc\\clinicdomain\\model\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA2DDEA6-F0EB-4D6C-975F-321E275B182F}|ClinicDomain\\ClinicDomain.csproj|solutionrelative:clinicdomain\\model\\doctor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FA2DDEA6-F0EB-4D6C-975F-321E275B182F}|ClinicDomain\\ClinicDomain.csproj|c:\\users\\professional\\desktop\\lab1\\src\\clinicmvc\\clinicdomain\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA2DDEA6-F0EB-4D6C-975F-321E275B182F}|ClinicDomain\\ClinicDomain.csproj|solutionrelative:clinicdomain\\model\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|c:\\users\\professional\\desktop\\lab1\\src\\clinicmvc\\clinicinfrastructure\\views\\clinics\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|solutionrelative:clinicinfrastructure\\views\\clinics\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|c:\\users\\professional\\desktop\\lab1\\src\\clinicmvc\\clinicinfrastructure\\views\\procedures\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|solutionrelative:clinicinfrastructure\\views\\procedures\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|c:\\users\\professional\\desktop\\lab1\\src\\clinicmvc\\clinicinfrastructure\\controllers\\appointmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|solutionrelative:clinicinfrastructure\\controllers\\appointmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|c:\\users\\professional\\desktop\\lab1\\src\\clinicmvc\\clinicinfrastructure\\controllers\\procedurescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|solutionrelative:clinicinfrastructure\\controllers\\procedurescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|c:\\users\\professional\\desktop\\lab1\\src\\clinicmvc\\clinicinfrastructure\\cliniccontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|solutionrelative:clinicinfrastructure\\cliniccontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|c:\\users\\professional\\desktop\\lab1\\src\\clinicmvc\\clinicinfrastructure\\views\\procedures\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|solutionrelative:clinicinfrastructure\\views\\procedures\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|c:\\users\\professional\\desktop\\lab1\\src\\clinicmvc\\clinicinfrastructure\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|solutionrelative:clinicinfrastructure\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|c:\\users\\professional\\desktop\\lab1\\src\\clinicmvc\\clinicinfrastructure\\views\\roles\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|solutionrelative:clinicinfrastructure\\views\\roles\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|c:\\users\\professional\\desktop\\lab1\\src\\clinicmvc\\clinicinfrastructure\\views\\roles\\userlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|solutionrelative:clinicinfrastructure\\views\\roles\\userlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|c:\\users\\professional\\desktop\\lab1\\src\\clinicmvc\\clinicinfrastructure\\viewmodel\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|solutionrelative:clinicinfrastructure\\viewmodel\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|c:\\users\\professional\\desktop\\lab1\\src\\clinicmvc\\clinicinfrastructure\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|solutionrelative:clinicinfrastructure\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|c:\\users\\professional\\desktop\\lab1\\src\\clinicmvc\\clinicinfrastructure\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|solutionrelative:clinicinfrastructure\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|c:\\users\\professional\\desktop\\lab1\\src\\clinicmvc\\clinicinfrastructure\\viewmodel\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|solutionrelative:clinicinfrastructure\\viewmodel\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|c:\\users\\professional\\desktop\\lab1\\src\\clinicmvc\\clinicinfrastructure\\models\\identitycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A03E01EE-2042-4C3A-87F8-7EB1D92743BD}|ClinicInfrastructure\\ClinicInfrastructure.csproj|solutionrelative:clinicinfrastructure\\models\\identitycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,12 +98,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 4,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
@@ -41,56 +109,293 @@
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ProceduresController.cs",
-              "DocumentMoniker": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\Controllers\\ProceduresController.cs",
-              "RelativeDocumentMoniker": "ClinicInfrastructure\\Controllers\\ProceduresController.cs",
-              "ToolTip": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\Controllers\\ProceduresController.cs",
-              "RelativeToolTip": "ClinicInfrastructure\\Controllers\\ProceduresController.cs",
-              "ViewState": "AQIAAH8AAAAAAAAAAAAswJsAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-17T23:09:25.193Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\Views\\Procedures\\Index.cshtml",
-              "RelativeDocumentMoniker": "ClinicInfrastructure\\Views\\Procedures\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\Views\\Procedures\\Index.cshtml",
-              "RelativeToolTip": "ClinicInfrastructure\\Views\\Procedures\\Index.cshtml",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAADUAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-17T23:07:02.302Z",
+              "DocumentIndex": 1,
+              "Title": "Discount.cs",
+              "DocumentMoniker": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicDomain\\Model\\Discount.cs",
+              "RelativeDocumentMoniker": "ClinicDomain\\Model\\Discount.cs",
+              "ToolTip": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicDomain\\Model\\Discount.cs",
+              "RelativeToolTip": "ClinicDomain\\Model\\Discount.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-15T01:43:03.759Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\Views\\Procedures\\Edit.cshtml",
-              "RelativeDocumentMoniker": "ClinicInfrastructure\\Views\\Procedures\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\Views\\Procedures\\Edit.cshtml",
-              "RelativeToolTip": "ClinicInfrastructure\\Views\\Procedures\\Edit.cshtml",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAACIAAAAGAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-17T23:07:28.935Z",
+              "Title": "PatientCard.cs",
+              "DocumentMoniker": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicDomain\\Model\\PatientCard.cs",
+              "RelativeDocumentMoniker": "ClinicDomain\\Model\\PatientCard.cs",
+              "ToolTip": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicDomain\\Model\\PatientCard.cs",
+              "RelativeToolTip": "ClinicDomain\\Model\\PatientCard.cs",
+              "ViewState": "AQIAABcAAAAAAAAAAAA9wCUAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-15T01:43:01.366Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Clinic.cs",
+              "DocumentMoniker": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicDomain\\Model\\Clinic.cs",
+              "RelativeDocumentMoniker": "ClinicDomain\\Model\\Clinic.cs",
+              "ToolTip": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicDomain\\Model\\Clinic.cs",
+              "RelativeToolTip": "ClinicDomain\\Model\\Clinic.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-15T01:42:42.174Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Doctor.cs",
+              "DocumentMoniker": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicDomain\\Model\\Doctor.cs",
+              "RelativeDocumentMoniker": "ClinicDomain\\Model\\Doctor.cs",
+              "ToolTip": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicDomain\\Model\\Doctor.cs",
+              "RelativeToolTip": "ClinicDomain\\Model\\Doctor.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-15T01:42:41.404Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Procedure.cs",
+              "DocumentMoniker": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicDomain\\Model\\Procedure.cs",
+              "RelativeDocumentMoniker": "ClinicDomain\\Model\\Procedure.cs",
+              "ToolTip": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicDomain\\Model\\Procedure.cs",
+              "RelativeToolTip": "ClinicDomain\\Model\\Procedure.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-15T01:42:40.598Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicDomain\\Model\\User.cs",
+              "RelativeDocumentMoniker": "ClinicDomain\\Model\\User.cs",
+              "ToolTip": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicDomain\\Model\\User.cs",
+              "RelativeToolTip": "ClinicDomain\\Model\\User.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-15T01:42:39.815Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Appointment.cs",
+              "DocumentMoniker": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicDomain\\Model\\Appointment.cs",
+              "RelativeDocumentMoniker": "ClinicDomain\\Model\\Appointment.cs",
+              "ToolTip": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicDomain\\Model\\Appointment.cs",
+              "RelativeToolTip": "ClinicDomain\\Model\\Appointment.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwCYAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-15T01:42:25.999Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Create.cshtml",
               "DocumentMoniker": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\Views\\Procedures\\Create.cshtml",
               "RelativeDocumentMoniker": "ClinicInfrastructure\\Views\\Procedures\\Create.cshtml",
               "ToolTip": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\Views\\Procedures\\Create.cshtml",
               "RelativeToolTip": "ClinicInfrastructure\\Views\\Procedures\\Create.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAACrAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-17T23:08:13.418Z",
+              "WhenOpened": "2024-04-15T01:39:33.368Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\Views\\Clinics\\Index.cshtml",
+              "RelativeDocumentMoniker": "ClinicInfrastructure\\Views\\Clinics\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\Views\\Clinics\\Index.cshtml",
+              "RelativeToolTip": "ClinicInfrastructure\\Views\\Clinics\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAABVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-15T01:39:12.046Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "AppointmentsController.cs",
+              "DocumentMoniker": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\Controllers\\AppointmentsController.cs",
+              "RelativeDocumentMoniker": "ClinicInfrastructure\\Controllers\\AppointmentsController.cs",
+              "ToolTip": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\Controllers\\AppointmentsController.cs",
+              "RelativeToolTip": "ClinicInfrastructure\\Controllers\\AppointmentsController.cs",
+              "ViewState": "AQIAAJsAAAAAAAAAAAAkwKAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-15T01:30:38.599Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ProceduresController.cs",
+              "DocumentMoniker": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\Controllers\\ProceduresController.cs",
+              "RelativeDocumentMoniker": "ClinicInfrastructure\\Controllers\\ProceduresController.cs",
+              "ToolTip": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\Controllers\\ProceduresController.cs",
+              "RelativeToolTip": "ClinicInfrastructure\\Controllers\\ProceduresController.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAAwGcAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-15T00:41:33.879Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ClinicContext.cs",
+              "DocumentMoniker": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\ClinicContext.cs",
+              "RelativeDocumentMoniker": "ClinicInfrastructure\\ClinicContext.cs",
+              "ToolTip": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\ClinicContext.cs",
+              "RelativeToolTip": "ClinicInfrastructure\\ClinicContext.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAwB4AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-15T01:19:15.129Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\Views\\Procedures\\Index.cshtml",
+              "RelativeDocumentMoniker": "ClinicInfrastructure\\Views\\Procedures\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\Views\\Procedures\\Index.cshtml",
+              "RelativeToolTip": "ClinicInfrastructure\\Views\\Procedures\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAIIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-15T00:42:53.086Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "RoleInitializer.cs",
+              "DocumentMoniker": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\RoleInitializer.cs",
+              "RelativeDocumentMoniker": "ClinicInfrastructure\\RoleInitializer.cs",
+              "ToolTip": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\RoleInitializer.cs",
+              "RelativeToolTip": "ClinicInfrastructure\\RoleInitializer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-15T00:33:19.892Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\Views\\Roles\\Edit.cshtml",
+              "RelativeDocumentMoniker": "ClinicInfrastructure\\Views\\Roles\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\Views\\Roles\\Edit.cshtml",
+              "RelativeToolTip": "ClinicInfrastructure\\Views\\Roles\\Edit.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-15T00:32:08.253Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\Program.cs",
+              "RelativeDocumentMoniker": "ClinicInfrastructure\\Program.cs",
+              "ToolTip": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\Program.cs",
+              "RelativeToolTip": "ClinicInfrastructure\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACgAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-26T01:37:55.214Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "UserList.cshtml",
+              "DocumentMoniker": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\Views\\Roles\\UserList.cshtml",
+              "RelativeDocumentMoniker": "ClinicInfrastructure\\Views\\Roles\\UserList.cshtml",
+              "ToolTip": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\Views\\Roles\\UserList.cshtml",
+              "RelativeToolTip": "ClinicInfrastructure\\Views\\Roles\\UserList.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-15T00:29:17.072Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "ClinicInfrastructure\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "ClinicInfrastructure\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-01T01:46:41.986Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "RegisterViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\ViewModel\\RegisterViewModel.cs",
+              "RelativeDocumentMoniker": "ClinicInfrastructure\\ViewModel\\RegisterViewModel.cs",
+              "ToolTip": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\ViewModel\\RegisterViewModel.cs",
+              "RelativeToolTip": "ClinicInfrastructure\\ViewModel\\RegisterViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T08:00:06.259Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\ViewModel\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "ClinicInfrastructure\\ViewModel\\LoginViewModel.cs",
+              "ToolTip": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\ViewModel\\LoginViewModel.cs",
+              "RelativeToolTip": "ClinicInfrastructure\\ViewModel\\LoginViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-15T00:13:40.433Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "ClinicInfrastructure\\Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "ClinicInfrastructure\\Views\\Account\\Login.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-15T00:16:14.26Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "IdentityContext.cs",
+              "DocumentMoniker": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\Models\\IdentityContext.cs",
+              "RelativeDocumentMoniker": "ClinicInfrastructure\\Models\\IdentityContext.cs",
+              "ToolTip": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\Models\\IdentityContext.cs",
+              "RelativeToolTip": "ClinicInfrastructure\\Models\\IdentityContext.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAsAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T07:58:05.58Z"
             }
           ]
         }

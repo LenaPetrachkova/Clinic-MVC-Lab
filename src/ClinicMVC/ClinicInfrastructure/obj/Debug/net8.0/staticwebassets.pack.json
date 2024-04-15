@@ -13,12 +13,32 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\wwwroot\\images\\Back222.png",
+      "PackagePath": "staticwebassets\\images\\Back222.png"
+    },
+    {
       "Id": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\wwwroot\\images\\Background2.png",
       "PackagePath": "staticwebassets\\images\\Background2.png"
     },
     {
       "Id": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\wwwroot\\images\\arrow-left-circle-fill.svg",
       "PackagePath": "staticwebassets\\images\\arrow-left-circle-fill.svg"
+    },
+    {
+      "Id": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\wwwroot\\images\\arrow-left-circle-fill1.svg",
+      "PackagePath": "staticwebassets\\images\\arrow-left-circle-fill1.svg"
+    },
+    {
+      "Id": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\wwwroot\\images\\clinic_back.png",
+      "PackagePath": "staticwebassets\\images\\clinic_back.png"
+    },
+    {
+      "Id": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\wwwroot\\images\\clinic_back1.png",
+      "PackagePath": "staticwebassets\\images\\clinic_back1.png"
+    },
+    {
+      "Id": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\wwwroot\\images\\clinic_back2.png",
+      "PackagePath": "staticwebassets\\images\\clinic_back2.png"
     },
     {
       "Id": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\wwwroot\\images\\icons8-info.svg",
@@ -37,8 +57,16 @@
       "PackagePath": "staticwebassets\\images\\pencil.svg"
     },
     {
+      "Id": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\wwwroot\\images\\pencil1.svg",
+      "PackagePath": "staticwebassets\\images\\pencil1.svg"
+    },
+    {
       "Id": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\wwwroot\\images\\price1.svg",
       "PackagePath": "staticwebassets\\images\\price1.svg"
+    },
+    {
+      "Id": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\wwwroot\\images\\trash.svg",
+      "PackagePath": "staticwebassets\\images\\trash.svg"
     },
     {
       "Id": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\wwwroot\\images\\trash3.svg",

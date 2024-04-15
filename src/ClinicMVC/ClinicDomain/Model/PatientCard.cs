@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace ClinicDomain.Models;
+namespace ClinicDomain.Model;
 
 public partial class PatientCard
 {
-    [Display(Name ="№ картки")]
     public int Id { get; set; }
 
     [Display(Name = "Ім'я")]
@@ -32,15 +31,18 @@ public partial class PatientCard
 
     [Display(Name = "Хронічні хвороби")]
     public string? ChronicDisease { get; set; }
-    
-    [Display(Name = "Захворювання")]
+
+    [Display(Name = "Хвороби")]
     public string? Diseases { get; set; }
 
     [Display(Name = "Соціальна група")]
     public int DiscountId { get; set; }
 
+    public int? ClinicId { get; set; }
+
     public virtual ICollection<Appointment> Appointments { get; set; } = new List<Appointment>();
 
-    [Display(Name = "Знижка")]
+    public virtual Clinic? Clinic { get; set; }
+
     public virtual Discount Discount { get; set; } = null!;
 }

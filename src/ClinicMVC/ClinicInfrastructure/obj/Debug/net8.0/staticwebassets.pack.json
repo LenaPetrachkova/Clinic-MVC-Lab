@@ -61,6 +61,14 @@
       "PackagePath": "staticwebassets\\images\\pencil1.svg"
     },
     {
+      "Id": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\wwwroot\\images\\person-circle.svg",
+      "PackagePath": "staticwebassets\\images\\person-circle.svg"
+    },
+    {
+      "Id": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\wwwroot\\images\\person-circle2.svg",
+      "PackagePath": "staticwebassets\\images\\person-circle2.svg"
+    },
+    {
       "Id": "C:\\Users\\Professional\\Desktop\\Lab1\\src\\ClinicMVC\\ClinicInfrastructure\\wwwroot\\images\\price1.svg",
       "PackagePath": "staticwebassets\\images\\price1.svg"
     },

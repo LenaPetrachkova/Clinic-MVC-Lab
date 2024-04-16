@@ -3,8 +3,13 @@
     ViewData["Title"] = "Index";
 }
 
-<h2>Список ролей</h2>
-<table class="table">
+
+<div style="margin-top: 30px; position: relative;">
+    <a asp-area="" asp-controller="Profile" asp-action="Index" class="image-button" style="position: absolute; left: -40px; top: 50%; transform: translateY(-50%);"></a>
+    <h3>Список ролей</h3>
+</div>
+
+<table class="table" style="font-size:25px; margin-top:30px;">
     @foreach (var role in Model)
     {
         <tr>
@@ -19,6 +24,6 @@
         </tr>
     }
 </table>
-<a asp-action="UserList">Список користувачів</a>
+<a asp-action="UserList" class="btn btn-primary" style="margin-top: 20px;">Список працівників</a>
 
 

@@ -5,11 +5,11 @@
     ViewData["Title"] = "Edit";
 }
 
-<h2>Зміна ролей для користувача @Model.UserEmail</h2>
+<h3>Зміна ролей для користувача @Model.UserName.Replace("_", " ")</h3>
 
 <form asp-action="Edit" method="post">
     <input type="hidden" name="userId" value="@Model.UserId" />
-    <div class="form-group">
+    <div class="form-group" style="font-size:25px; margin-top: 30px;">
         @foreach (IdentityRole role in Model.AllRoles)
         {
             <input type="checkbox" name="roles" value="@role.Name"
@@ -18,7 +18,7 @@
             @role.Name <br />
         }
     </div>
-    <button type="submit" class="btn btn-primary">Зберегти</button>
+    <button type="submit" class="btn btn-primary" style="margin-top:20px;">Зберегти</button>
 </form>
 
 

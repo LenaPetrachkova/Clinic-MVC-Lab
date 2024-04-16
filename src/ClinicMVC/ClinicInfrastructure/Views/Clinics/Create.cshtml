@@ -4,7 +4,7 @@
     ViewData["Title"] = "Create";
 }
 
-<h2 style="text-align: center; margin-top:60px;">Реєстрація</h2>
+<h2 style="text-align: center; margin-top:40px;">Реєстрація</h2>
 
 <div class="row" style="justify-content:center;">
     <div class="col-md-4">
@@ -46,6 +46,10 @@
             </div>
             <input type="hidden" asp-for="Id" />
         </form>
+        <div class="text-center" style="font-size: 20px; margin-top: 20px;">
+            Вже є акаунт?
+            <a asp-area="" asp-controller="Account" asp-action="Login" style="font-size:20px;">Увійти</a>
+        </div>     
     </div>
 </div>
 

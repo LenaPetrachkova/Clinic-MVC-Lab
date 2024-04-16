@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ClinicDomain.Model;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ClinicInfrastructure.Controllers
 {
@@ -22,13 +23,11 @@ namespace ClinicInfrastructure.Controllers
         }
 
         // GET: Appointments
-        // GET: Appointments
         public async Task<IActionResult> Index()
         {
             var currentUser = await _userManager.GetUserAsync(User);
             var currentClinicId = currentUser.ClinicId;
 
-            // Получаем только аппоинтменты, у которых ClinicId совпадает с ClinicId текущего пользователя
             var clinicContext = _context.Appointments
                 .Where(a => a.ClinicId == currentClinicId)
                 .Include(a => a.Doctor)
@@ -60,6 +59,8 @@ namespace ClinicInfrastructure.Controllers
             return View(appointment);
         }
 
+
+        [Authorize(Roles = "Admin, Owner")]
         // GET: Appointments/Create
         public async Task<IActionResult> Create()
         {
@@ -69,26 +70,35 @@ namespace ClinicInfrastructure.Controllers
                 return RedirectToAction("Login", "Account");
             }
 
+            var clinicId = currentUser.ClinicId;
 
-            var doctors = _context.Doctors.Select(d => new {
-                Id = d.Id,
-                FullName = d.LastName + " " + d.FirstName + " " + d.FatherName
+            var doctorUsers = await _userManager.GetUsersInRoleAsync("Doctor");
+
+            var doctors = doctorUsers.Where(u => u.ClinicId == clinicId).Select(u => new {
+                Id = u.Id,
+                FullName = u.UserName
             }).ToList();
+
             ViewData["DoctorId"] = new SelectList(doctors, "Id", "FullName");
 
-            var patients = _context.PatientCards.Select(p => new {
-                Id = p.Id,
-                FullName = p.LastName + " " + p.FirstName + " " + p.FatherName
-            }).ToList();
+            var patients = _context.PatientCards
+                .Where(p => p.ClinicId == clinicId)
+                .Select(p => new {
+                    Id = p.Id,
+                    FullName = p.LastName + " " + p.FirstName + " " + p.FatherName
+                }).ToList();
             ViewData["PatientId"] = new SelectList(patients, "Id", "FullName");
-            ViewData["ProceduresId"] = new SelectList(_context.Procedures, "Id", "Name");
 
+            var procedures = _context.Procedures
+                .Where(pr => pr.ClinicId == clinicId)
+                .ToList();
+            ViewData["ProceduresId"] = new SelectList(procedures, "Id", "Name");
 
             return View();
         }
 
 
-
+        [Authorize(Roles = "Admin, Owner")]
         // POST: Appointments/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -120,6 +130,8 @@ namespace ClinicInfrastructure.Controllers
         }
 
         // GET: Appointments/Edit/5
+
+        [Authorize(Roles = "Admin, Owner")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -152,6 +164,8 @@ namespace ClinicInfrastructure.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+
+        [Authorize(Roles = "Admin, Owner")]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Date,StartTime,EndTime,PatientId,ProceduresId,DoctorId")] Appointment appointment)
         {
             if (id != appointment.Id)
@@ -197,6 +211,8 @@ namespace ClinicInfrastructure.Controllers
         }
 
         // GET: Appointments/Delete/5
+
+        [Authorize(Roles = "Admin, Owner")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -220,6 +236,8 @@ namespace ClinicInfrastructure.Controllers
         // POST: Appointments/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+
+        [Authorize(Roles = "Admin, Owner")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var appointment = await _context.Appointments.FindAsync(id);

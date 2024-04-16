@@ -1,0 +1,75 @@
+﻿@{
+    ViewData["Title"] = "Profile";
+}
+@model ClinicDomain.Model.Clinic
+
+
+<div style="margin-top: 30px; position: relative;">
+    <a asp-area="" asp-controller="Home" asp-action="" class="image-button" style="position: absolute; left: -40px; top: 50%; transform: translateY(-50%);"></a>
+    <h3>Мій профіль</h3>
+</div>
+
+<div style="font-size:25px; margin-top:20px; display: flex; align-items: center;">
+    <p style="margin-bottom: 20px;">Ім'я користувача:  @User.Identity.Name.Replace("_", " ")</p>
+    <form method="post" asp-controller="Account" asp-action="Logout">
+        <input type="submit" class="btn btn-danger" style="margin-left:60px; margin-bottom:20px;" value="Вихід" />
+    </form>
+</div>
+
+<hr />
+<div style="font-size:25px; margin-top:20px; margin-bottom:15px;">
+    <span style="display: inline-block; vertical-align: middle;">Інформація про лікарню</span>
+    @if (User.IsInRole("Owner"))
+    {
+        <a asp-action="Edit" asp-controller="Clinics" asp-route-id="@Model?.Id" class="edit-image-button" style="display: inline-block; margin-left: 20px; vertical-align: middle;">Редагувати</a>
+    }
+</div>
+
+<dl class="row">
+    <dd class="col-sm-2" style="font-size:18px;">
+        @Html.DisplayNameFor(model => model.Name):
+    </dd>
+    <dd class="col-sm-10" style="font-size:18px;">
+        @Html.DisplayFor(model => model.Name)
+    </dd>
+    <dd class="col-sm-2" style="font-size:18px;">
+        @Html.DisplayNameFor(model => model.Specialization):
+    </dd>
+    <dd class="col-sm-10" style="font-size:18px;">
+        @Html.DisplayFor(model => model.Specialization)
+    </dd>
+    <dd class="col-sm-2" style="font-size:18px;">
+        @Html.DisplayNameFor(model => model.Address):
+    </dd>
+    <dd class="col-sm-10" style="font-size:18px;">
+        @Html.DisplayFor(model => model.Address)
+    </dd>
+    <dd class="col-sm-2" style="font-size:18px;">
+        @Html.DisplayNameFor(model => model.PhoneNumber):
+    </dd>
+    <dd class="col-sm-10" style="font-size:18px;">
+        @Html.DisplayFor(model => model.PhoneNumber)
+    </dd>
+    <dd class="col-sm-2" style="font-size:18px;">
+        @Html.DisplayNameFor(model => model.Email):
+    </dd>
+    <dd class="col-sm-10" style="font-size:18px;">
+        @Html.DisplayFor(model => model.Email)
+    </dd>
+</dl>
+<hr/>
+@if (User.IsInRole("Owner"))
+{
+    <div style="font-size:25px; margin-top:20px;">
+        Адміністрування
+        <p>
+            <a asp-action="UserList" asp-controller="Roles" class="btn btn-primary " style=" margin-top:20px; margin-right:30px;">Список працівників</a>
+            <a asp-action="Index" asp-controller="Roles" class="btn btn-primary " style=" margin-top:20px;">Список ролей</a>
+        </p>
+        <p>
+            <a asp-action="RegisterAdmin" asp-controller="Account" class="btn btn-dark" style="margin-right:30px; margin-top:15px;">Додати адміністратора</a>
+            <a asp-action="RegisterDoctor" asp-controller="Account" class="btn btn-dark" style="margin-top:15px;">Додати лікаря</a>
+        </p>
+    </div>
+}
+

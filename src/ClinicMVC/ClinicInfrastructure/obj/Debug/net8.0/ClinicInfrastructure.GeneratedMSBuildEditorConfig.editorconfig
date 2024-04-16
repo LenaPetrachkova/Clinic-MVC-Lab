@@ -34,6 +34,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Professional/Desktop/Lab1/src/ClinicMVC/ClinicInfrastructure/Views/Account/RegisterAdmin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3RlckFkbWluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Professional/Desktop/Lab1/src/ClinicMVC/ClinicInfrastructure/Views/Account/RegisterDoctor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3RlckRvY3Rvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Professional/Desktop/Lab1/src/ClinicMVC/ClinicInfrastructure/Views/Appointments/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXBwb2ludG1lbnRzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -56,14 +64,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Professional/Desktop/Lab1/src/ClinicMVC/ClinicInfrastructure/Views/Clinics/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpbmljc1xDcmVhdGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Professional/Desktop/Lab1/src/ClinicMVC/ClinicInfrastructure/Views/Clinics/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpbmljc1xEZWxldGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Professional/Desktop/Lab1/src/ClinicMVC/ClinicInfrastructure/Views/Clinics/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpbmljc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Professional/Desktop/Lab1/src/ClinicMVC/ClinicInfrastructure/Views/Clinics/Edit.cshtml]
@@ -104,6 +104,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Professional/Desktop/Lab1/src/ClinicMVC/ClinicInfrastructure/Views/Procedures/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvY2VkdXJlc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Professional/Desktop/Lab1/src/ClinicMVC/ClinicInfrastructure/Views/Profile/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZmlsZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Professional/Desktop/Lab1/src/ClinicMVC/ClinicInfrastructure/Views/Roles/Edit.cshtml]

@@ -4,6 +4,9 @@ namespace ClinicInfrastructure.ViewModel
 {
     public class RegisterViewModel
     {
+        [Display(Name = "ПІБ")]
+        public string Username { get; set; }
+
         [Display(Name = "Email")]
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }

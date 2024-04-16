@@ -2,6 +2,7 @@
 using ClinicInfrastructure.ViewModel;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace ClinicInfrastructure.Controllers
 {
@@ -15,19 +16,27 @@ namespace ClinicInfrastructure.Controllers
             _userManager = userManager;
         }
         public IActionResult Index() => View(_roleManager.Roles.ToList());
-        public IActionResult UserList() => View(_userManager.Users.ToList());
+        public async Task<IActionResult> UserList()
+        {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var user = await _userManager.FindByIdAsync(userId);
+            var clinicId = user.ClinicId;
+
+            var users = _userManager.Users.Where(u => u.ClinicId == clinicId).ToList();
+
+            return View(users);
+        }
 
         public async Task<IActionResult> Edit(string userId)
         {
-            // отримуємо користувача
             User user = await _userManager.FindByIdAsync(userId);
             if (user != null)
             {
-                //список ролей користувача
                 var userRoles = await _userManager.GetRolesAsync(user);
                 var allRoles = _roleManager.Roles.ToList();
                 ChangeRoleViewModel model = new ChangeRoleViewModel
                 {
+                    UserName = user.UserName,
                     UserId = user.Id,
                     UserEmail = user.Email,
                     UserRoles = userRoles,
@@ -41,17 +50,12 @@ namespace ClinicInfrastructure.Controllers
         [HttpPost]
         public async Task<IActionResult> Edit(string userId, List<string> roles)
         {
-            // отримуємо користувача
             User user = await _userManager.FindByIdAsync(userId);
             if (user != null)
             {
-                // список ролей користувача
                 var userRoles = await _userManager.GetRolesAsync(user);
-                // получаем все роли
                 var allRoles = _roleManager.Roles.ToList();
-                // список ролей, які було додано
                 var addedRoles = roles.Except(userRoles);
-                // список ролей, які було видалено
                 var removedRoles = userRoles.Except(roles);
 
                 await _userManager.AddToRolesAsync(user, addedRoles);

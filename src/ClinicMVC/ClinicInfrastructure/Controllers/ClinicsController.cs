@@ -112,7 +112,7 @@ namespace ClinicInfrastructure.Controllers
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Index", "Profile");
             }
             return View(clinic);
         }

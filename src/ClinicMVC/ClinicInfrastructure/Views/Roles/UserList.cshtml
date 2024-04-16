@@ -4,13 +4,16 @@
     ViewData["Title"] = "UserList";
 }
 
+<div style="margin-top: 30px; position: relative;">
+    <a asp-area="" asp-controller="Profile" asp-action="Index" class="image-button" style="position: absolute; left: -40px; top: 50%; transform: translateY(-50%);"></a>
+    <h3>Список працівників</h3>
+</div>
 
-<h2>Список користувачів</h2>
-<table class="table">
+<table class="table" style="margin-top:20px;">
     @foreach (var user in Model)
     {
         <tr>
-            <td>@user.Email</td>
+            <td>@user.UserName.Replace("_", " ")</td>
             <td>
                 <a class="btn btn-sm btn-primary" asp-action="Edit" asp-route-userid="@user.Id">Права доступу</a>
             </td>

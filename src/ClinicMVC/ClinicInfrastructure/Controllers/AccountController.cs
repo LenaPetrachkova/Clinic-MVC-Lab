@@ -26,10 +26,12 @@ namespace ClinicInfrastructure.Controllers
         {
             if (ModelState.IsValid)
             {
-                User user = new User { Email = model.Email, UserName = model.Email, ClinicId = model.ClinicId };
+                User user = new User { Email = model.Email, UserName = model.Username, ClinicId = model.ClinicId };
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
+                    await _userManager.AddToRoleAsync(user, "Owner");
+
                     await _signInManager.SignInAsync(user, false);
                     return RedirectToAction("Index", "Home");
                 }
@@ -44,6 +46,108 @@ namespace ClinicInfrastructure.Controllers
             return View(model);
 
         }
+        public async Task<IActionResult> RegisterAdmin()
+        {
+            var currentUser = await _userManager.GetUserAsync(User);
+            if (currentUser != null)
+            {             
+                ViewBag.ClinicId = currentUser.ClinicId;
+                return View();
+            }
+            else
+            {
+               
+                return View(new RegisterViewModel());
+            }
+        }
+
+
+        [HttpPost]
+        public async Task<IActionResult> RegisterAdmin(RegisterViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+               
+                var currentUser = await _userManager.GetUserAsync(User);
+                if (currentUser != null)
+                {
+                    
+                    var adminUser = new User { UserName = model.Username, Email = model.Email, ClinicId = currentUser.ClinicId };
+                    var result = await _userManager.CreateAsync(adminUser, model.Password);
+                    if (result.Succeeded)
+                    {
+                        await _userManager.AddToRoleAsync(adminUser, "Admin");
+
+                        return RedirectToAction("Index", "Home");
+                    }
+                    else
+                    {
+                        foreach (var error in result.Errors)
+                        {
+                            ModelState.AddModelError(string.Empty, error.Description);
+                        }
+                    }
+                }
+                else
+                {
+                   
+                    ModelState.AddModelError(string.Empty, "Поточний користувач не знайдений або не ввійшов до системи.");
+                }
+            }
+            return View(model);
+        }
+
+
+        public async Task<IActionResult> RegisterDoctor()
+        {
+            var currentUser = await _userManager.GetUserAsync(User);
+            if (currentUser != null)
+            {
+                ViewBag.ClinicId = currentUser.ClinicId;
+                return View();
+            }
+            else
+            {
+
+                return View(new RegisterViewModel());
+            }
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> RegisterDoctor(RegisterViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+
+                var currentUser = await _userManager.GetUserAsync(User);
+                if (currentUser != null)
+                {
+
+                    var doctorUser = new User { UserName = model.Username, Email = model.Email, ClinicId = currentUser.ClinicId };
+                    var result = await _userManager.CreateAsync(doctorUser, model.Password);
+                    if (result.Succeeded)
+                    {
+                        await _userManager.AddToRoleAsync(doctorUser, "Doctor");
+
+                        return RedirectToAction("Index", "Home");
+                    }
+                    else
+                    {
+                        foreach (var error in result.Errors)
+                        {
+                            ModelState.AddModelError(string.Empty, error.Description);
+                        }
+                    }
+                }
+                else
+                {
+
+                    ModelState.AddModelError(string.Empty, "Поточний користувач не знайдений або не ввійшов до системи.");
+                }
+            }
+            return View(model);
+        }
+
 
         [HttpGet]
         public IActionResult Login(string returnUrl = null)
@@ -59,10 +163,10 @@ namespace ClinicInfrastructure.Controllers
             if (ModelState.IsValid)
             {
                 var result =
-                    await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, false);
+                    await _signInManager.PasswordSignInAsync(model.Username, model.Password, model.RememberMe, false);
                 if (result.Succeeded)
                 {
-                    // перевіряємо, чи належить URL додатку
+                
                     if (!string.IsNullOrEmpty(model.ReturnUrl) && Url.IsLocalUrl(model.ReturnUrl))
                     {
                         return Redirect(model.ReturnUrl);
@@ -84,7 +188,6 @@ namespace ClinicInfrastructure.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Logout()
         {
-            // видаляємо автентифікаційні куки
             await _signInManager.SignOutAsync();
             return RedirectToAction("Index", "Home");
         }

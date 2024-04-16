@@ -6,28 +6,44 @@
     int clinicId = Convert.ToInt32(ViewBag.ClinicId);
 }
 
-<h2>Реєстрація нового користувача</h2>
-<form method="post" asp-controller="Account" asp-action="Register" asp-route-clinicId="@clinicId">
-    <div asp-validation-summary="ModelOnly"></div>
-    <div>
-        <label asp-for="Email"></label><br />
-        <input asp-for="Email" />
-        <span asp-validation-for="Email"></span>
-    </div>
-    <div>
-        <label asp-for="Password"></label><br />
-        <input asp-for="Password" />
-        <span asp-validation-for="Password"></span>
-    </div>
-    <div>
-        <label asp-for="ConfirmPassword"></label><br />
-        <input asp-for="ConfirmPassword" />
-        <span asp-validation-for="ConfirmPassword"></span>
-    </div>
-    <input type="hidden" asp-for="ClinicId" value="@ViewBag.ClinicId" />
-    <div>
-        <input type="submit" value="Реєстрація" />
-    </div>
-</form>
+<h2 style="text-align: center; margin-top:60px;">Реєстрація власника лікарні</h2>
+
+<div class="row" style="justify-content:center;">
+    <div class="col-md-4">
+        <form method="post" asp-controller="Account" asp-action="Register" asp-route-clinicId="@clinicId">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
 
+            <div class="form-group" style="margin-top:20px;">
+                <label asp-for="Username" class="control-label" style="font-size: 20px;"></label>
+                <input asp-for="Username" class="form-control" style="height:45px;" />
+                <span asp-validation-for="Username" class="text-danger"></span>
+            </div>
+
+            <div class="form-group" style="margin-top:20px;">
+                <label asp-for="Email" class="control-label" style="font-size: 20px;"></label>
+                <input asp-for="Email" class="form-control" style="height:45px;" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+
+            <div class="form-group" style="margin-top:20px;">
+                <label asp-for="Password" class="control-label" style="font-size: 20px;"></label>
+                <input asp-for="Password" class="form-control" style="height:45px;" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="margin-top:20px;">
+                <label asp-for="ConfirmPassword" class="control-label" style="font-size: 20px;"></label> <br />
+                <input asp-for="ConfirmPassword" class="form-control" style="height:45px;" />
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            </div>
+                <input type="hidden" asp-for="ClinicId" value="@ViewBag.ClinicId" />
+            <div class="form-group" style="margin-top:30px; text-align: center;">
+                <input type="submit" value="Зареєструватися" class="btn btn-primary btn-lg" />
+            </div>
+        </form>
+        <div class="text-center" style="font-size: 20px; margin-top: 20px;">
+            Вже є акаунт?
+            <a asp-area="" asp-controller="Account" asp-action="Login" style="font-size:20px;">Увійти</a>
+        </div>
+    </div>
+</div>

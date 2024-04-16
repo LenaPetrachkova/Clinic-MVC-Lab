@@ -11,6 +11,7 @@ using ClinicDomain;
 using X.PagedList;
 using ClinicDomain.Model;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ClinicInfrastructure.Controllers
 {
@@ -75,6 +76,7 @@ namespace ClinicInfrastructure.Controllers
 
 
         // GET: PatientCards/Details/5
+        [Authorize(Roles = "Doctor, Owner")]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -94,6 +96,7 @@ namespace ClinicInfrastructure.Controllers
         }
 
         // GET: PatientCards/Create
+        [Authorize(Roles = "Doctor, Owner")]
         public async Task<IActionResult> Create()
         {
             var currentUser = await _userManager.GetUserAsync(User);
@@ -110,6 +113,7 @@ namespace ClinicInfrastructure.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Doctor, Owner")]
         public async Task<IActionResult> Create([Bind("FirstName,LastName,FatherName,PhoneNumber,DateOfBirth,AddInfo,Allergy,ChronicDisease,Diseases,DiscountId,Id")] PatientCard patientCard)
         {
             var currentUser = await _userManager.GetUserAsync(User);
@@ -132,6 +136,7 @@ namespace ClinicInfrastructure.Controllers
         }
 
         // GET: PatientCards/Edit/5
+        [Authorize(Roles = "Doctor, Owner")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -150,6 +155,7 @@ namespace ClinicInfrastructure.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Doctor, Owner")]
         public async Task<IActionResult> Edit(int id, [Bind("FirstName,LastName,FatherName,PhoneNumber,DateOfBirth,AddInfo,Allergy,ChronicDisease,Diseases,DiscountId,Id")] PatientCard patientCard)
         {
             if (id != patientCard.Id)
@@ -192,6 +198,7 @@ namespace ClinicInfrastructure.Controllers
 
 
         // GET: PatientCards/Delete/5
+        [Authorize(Roles = "Doctor, Owner")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -213,6 +220,7 @@ namespace ClinicInfrastructure.Controllers
         // POST: PatientCards/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Doctor, Owner")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var patientCard = await _context.PatientCards

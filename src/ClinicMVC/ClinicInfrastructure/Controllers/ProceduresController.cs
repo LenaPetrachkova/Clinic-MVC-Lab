@@ -9,6 +9,7 @@ using ClinicInfrastructure;
 using X.PagedList;
 using ClinicDomain.Model;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ClinicInfrastructure.Controllers
 {
@@ -57,6 +58,7 @@ namespace ClinicInfrastructure.Controllers
         }
 
         // GET: Procedures/Details/5
+
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -76,6 +78,7 @@ namespace ClinicInfrastructure.Controllers
         }
 
         // GET: Procedures/Create
+        [Authorize(Roles = "Owner")]
         public async Task<IActionResult> Create()
         {
             var currentUser = await _userManager.GetUserAsync(User);
@@ -93,6 +96,7 @@ namespace ClinicInfrastructure.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Owner")]
         public async Task<IActionResult> Create([Bind("Id,Name,Price,ClinicId")] Procedure procedure)
         {
             var currentUser = await _userManager.GetUserAsync(User);
@@ -116,6 +120,7 @@ namespace ClinicInfrastructure.Controllers
         }
 
         // GET: Procedures/Edit/5
+        [Authorize(Roles = "Owner")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -137,6 +142,7 @@ namespace ClinicInfrastructure.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Owner")]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Price,ClinicId")] Procedure procedure)
         {
             if (id != procedure.Id)
@@ -172,6 +178,7 @@ namespace ClinicInfrastructure.Controllers
 
 
         // GET: Procedures/Delete/5
+        [Authorize(Roles = "Owner")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -193,6 +200,7 @@ namespace ClinicInfrastructure.Controllers
         // POST: Procedures/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Owner")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var procedure = await _context.Procedures.FindAsync(id);

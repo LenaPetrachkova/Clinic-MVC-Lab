@@ -13,9 +13,12 @@
 
 <div style="position: relative;">
     <div class="d-flex align-items-center" style="margin-bottom:20px; margin-top:20px;">
+        @if (User.IsInRole("Owner"))
+                {
         <p class="me-2 mb-0">
             <a asp-action="Create" class="btn btn-primary">Додати</a>
         </p>
+                }
         <form class="input-group mb-0 d-flex ms-auto justify-content-end">
             <input class="form-control" name="searchString" style="max-width: 300px;" placeholder="Пошук" aria-describedby="button-addon2" value="@ViewBag.CurrentFilter">
             <button class="btn btn-primary" type="submit" id="button-addon2">Знайти</button>
@@ -49,10 +52,13 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Price)
             </td>
+                @if (User.IsInRole("Owner"))
+                {
             <td style="text-align: right;">
                     <a asp-area="" asp-controller="Procedures" asp-action="Edit" asp-route-id="@item.Id" class="edit-image-button" style="margin-right:20px;"></a>
                     <a href="javascript:void(0)" onclick="openDeleteConfirmationModal('@item.Id')" class="delete-image-button"></a>
             </td>
+                }
         </tr>
 }
     </tbody>

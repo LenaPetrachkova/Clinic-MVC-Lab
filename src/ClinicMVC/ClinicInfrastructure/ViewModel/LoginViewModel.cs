@@ -6,8 +6,8 @@ namespace ClinicInfrastructure.ViewModel
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "Email")]
-        public string Email { get; set; }
+        [Display(Name = "Ім'я користувача")]
+        public string Username { get; set; }
 
         [Required]
         [DataType(DataType.Password)]

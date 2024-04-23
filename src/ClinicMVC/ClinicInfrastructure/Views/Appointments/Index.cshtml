@@ -27,14 +27,12 @@
                 @Html.DisplayNameFor(model => model.EndTime)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Doctor)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.Patient)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Procedures)
             </th>
+
             <th></th>
         </tr>
     </thead>
@@ -51,9 +49,6 @@
                 @Html.DisplayFor(modelItem => item.EndTime)
             </td>
             <td>
-                    @Html.DisplayFor(modelItem => item.Doctor.LastName) @Html.DisplayFor(modelItem => item.Doctor.FirstName) @Html.DisplayFor(modelItem => item.Doctor.FatherName)
-            </td>
-            <td>
                     @Html.DisplayFor(modelItem => item.Patient.LastName) @Html.DisplayFor(modelItem => item.Patient.FirstName) @Html.DisplayFor(modelItem => item.Patient.FatherName)
             </td>
             <td>
@@ -62,12 +57,12 @@
             <td>
                     @if (User.IsInRole("Admin") || User.IsInRole("Owner"))
                     {
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> 
+                <a asp-action="Edit" asp-route-id="@item.Id">Редагувати</a> 
                     }
-               | <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+               | <a asp-action="Details" asp-route-id="@item.Id">Деталі</a> |
                     @if (User.IsInRole("Admin") || User.IsInRole("Owner"))
                     {
-                       <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                       <a asp-action="Delete" asp-route-id="@item.Id">Видалити</a>
                     }
             </td>
         </tr>

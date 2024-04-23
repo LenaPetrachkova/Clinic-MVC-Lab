@@ -565,3 +565,10 @@ C:\Users\Professional\Desktop\Lab1\src\ClinicMVC\ClinicInfrastructure\bin\Debug\
 C:\Users\Professional\Desktop\Lab1\src\ClinicMVC\ClinicInfrastructure\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 C:\Users\Professional\Desktop\Lab1\src\ClinicMVC\ClinicInfrastructure\bin\Debug\net8.0\X.PagedList.dll
 C:\Users\Professional\Desktop\Lab1\src\ClinicMVC\ClinicInfrastructure\bin\Debug\net8.0\X.PagedList.Mvc.Core.dll
+C:\Users\Professional\Desktop\Lab1\src\ClinicMVC\ClinicInfrastructure\bin\Debug\net8.0\ClosedXML.dll
+C:\Users\Professional\Desktop\Lab1\src\ClinicMVC\ClinicInfrastructure\bin\Debug\net8.0\DocumentFormat.OpenXml.dll
+C:\Users\Professional\Desktop\Lab1\src\ClinicMVC\ClinicInfrastructure\bin\Debug\net8.0\ExcelNumberFormat.dll
+C:\Users\Professional\Desktop\Lab1\src\ClinicMVC\ClinicInfrastructure\bin\Debug\net8.0\Irony.dll
+C:\Users\Professional\Desktop\Lab1\src\ClinicMVC\ClinicInfrastructure\bin\Debug\net8.0\SixLabors.Fonts.dll
+C:\Users\Professional\Desktop\Lab1\src\ClinicMVC\ClinicInfrastructure\bin\Debug\net8.0\System.IO.Packaging.dll
+C:\Users\Professional\Desktop\Lab1\src\ClinicMVC\ClinicInfrastructure\bin\Debug\net8.0\XLParser.dll

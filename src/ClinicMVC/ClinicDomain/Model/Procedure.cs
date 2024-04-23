@@ -10,7 +10,6 @@ public partial class Procedure
 
     [Display(Name = "Назва")]
     public string Name { get; set; } = null!;
-
     [Display(Name = "Вартість")]
     public double Price { get; set; }
 

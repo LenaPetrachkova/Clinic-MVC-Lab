@@ -3,6 +3,7 @@ using ClinicInfrastructure;
 using Microsoft.AspNetCore.Identity;
 using ClinicInfrastructure.Models;
 using ClinicDomain.Model;
+using ClinicInfrastructure.Services;
 
 
 
@@ -21,6 +22,8 @@ builder.Services.AddDbContext<IdentityContext>(option => option.UseSqlServer(
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddIdentity<User, IdentityRole>().AddEntityFrameworkStores<IdentityContext>();
+
+builder.Services.AddScoped<PatientCardDataPortServiceFactory>();
 
 var app = builder.Build();
 

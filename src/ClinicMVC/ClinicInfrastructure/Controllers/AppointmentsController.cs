@@ -30,7 +30,6 @@ namespace ClinicInfrastructure.Controllers
 
             var clinicContext = _context.Appointments
                 .Where(a => a.ClinicId == currentClinicId)
-                .Include(a => a.Doctor)
                 .Include(a => a.Patient)
                 .Include(a => a.Procedures);
 
@@ -47,7 +46,6 @@ namespace ClinicInfrastructure.Controllers
             }
 
             var appointment = await _context.Appointments
-                .Include(a => a.Doctor)
                 .Include(a => a.Patient)
                 .Include(a => a.Procedures)
                 .FirstOrDefaultAsync(m => m.Id == id);
@@ -72,22 +70,25 @@ namespace ClinicInfrastructure.Controllers
 
             var clinicId = currentUser.ClinicId;
 
-            var doctorUsers = await _userManager.GetUsersInRoleAsync("Doctor");
+            var patients = _context.PatientCards
+                .Where(p => p.ClinicId == clinicId)
+                .ToList();
 
+            var patientItems = patients.Select(p => new SelectListItem
+            {
+                Value = p.Id.ToString(),
+                Text = $"{p.LastName} {p.FirstName} {p.FatherName}"
+            }).ToList();
+
+            ViewBag.PatientId = new SelectList(patientItems, "Value", "Text");
+
+            var doctorUsers = await _userManager.GetUsersInRoleAsync("Doctor");
             var doctors = doctorUsers.Where(u => u.ClinicId == clinicId).Select(u => new {
                 Id = u.Id,
                 FullName = u.UserName
             }).ToList();
 
             ViewData["DoctorId"] = new SelectList(doctors, "Id", "FullName");
-
-            var patients = _context.PatientCards
-                .Where(p => p.ClinicId == clinicId)
-                .Select(p => new {
-                    Id = p.Id,
-                    FullName = p.LastName + " " + p.FirstName + " " + p.FatherName
-                }).ToList();
-            ViewData["PatientId"] = new SelectList(patients, "Id", "FullName");
 
             var procedures = _context.Procedures
                 .Where(pr => pr.ClinicId == clinicId)
@@ -96,6 +97,7 @@ namespace ClinicInfrastructure.Controllers
 
             return View();
         }
+
 
 
         [Authorize(Roles = "Admin, Owner")]
@@ -114,7 +116,7 @@ namespace ClinicInfrastructure.Controllers
 
             appointment.ClinicId = currentUser.ClinicId;
 
-            ModelState.Remove("Doctor");
+            ModelState.Remove("DoctorId");
             ModelState.Remove("Patient");
             ModelState.Remove("Procedures");            
             if (ModelState.IsValid)
@@ -123,7 +125,6 @@ namespace ClinicInfrastructure.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["DoctorId"] = new SelectList(_context.Doctors, "Id", "FullName", appointment.DoctorId);
             ViewData["PatientId"] = new SelectList(_context.PatientCards, "Id", "FullName", appointment.PatientId);
             ViewData["ProceduresId"] = new SelectList(_context.Procedures, "Id", "Name", appointment.ProceduresId);
             return View(appointment);
@@ -144,11 +145,6 @@ namespace ClinicInfrastructure.Controllers
             {
                 return NotFound();
             }
-            var doctors = _context.Doctors.Select(d => new {
-                Id = d.Id,
-                FullName = d.LastName + " " + d.FirstName + " " + d.FatherName
-            }).ToList();
-            ViewData["DoctorId"] = new SelectList(doctors, "Id", "FullName");
 
             var patients = _context.PatientCards.Select(p => new {
                 Id = p.Id,
@@ -204,7 +200,6 @@ namespace ClinicInfrastructure.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["DoctorId"] = new SelectList(_context.Doctors, "Id", "FullName", appointment.DoctorId);
             ViewData["PatientId"] = new SelectList(_context.PatientCards, "Id", "FullName", appointment.PatientId);
             ViewData["ProceduresId"] = new SelectList(_context.Procedures, "Id", "Name", appointment.ProceduresId);
             return View(appointment);
@@ -221,7 +216,6 @@ namespace ClinicInfrastructure.Controllers
             }
 
             var appointment = await _context.Appointments
-                .Include(a => a.Doctor)
                 .Include(a => a.Patient)
                 .Include(a => a.Procedures)
                 .FirstOrDefaultAsync(m => m.Id == id);

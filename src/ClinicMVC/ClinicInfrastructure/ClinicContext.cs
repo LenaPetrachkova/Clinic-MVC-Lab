@@ -21,15 +21,13 @@ public partial class ClinicContext : DbContext
 
     public virtual DbSet<Discount> Discounts { get; set; }
 
-    public virtual DbSet<Doctor> Doctors { get; set; }
-
     public virtual DbSet<PatientCard> PatientCards { get; set; }
 
     public virtual DbSet<Procedure> Procedures { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=USER-PC\\SQLEXPRESS; Database=Clinic; Trusted_Connection=True; TrustServerCertificate=True;");
+        => optionsBuilder.UseSqlServer("Server=USER-PC\\SQLEXPRESS; Database=Clinic; Trusted_Connection=True; TrustServerCertificate=True; ");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -45,11 +43,6 @@ public partial class ClinicContext : DbContext
             entity.HasOne(d => d.Clinic).WithMany(p => p.Appointments)
                 .HasForeignKey(d => d.ClinicId)
                 .HasConstraintName("FK_Appointments_Clinic");
-
-            entity.HasOne(d => d.Doctor).WithMany(p => p.Appointments)
-                .HasForeignKey(d => d.DoctorId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Appointments_Doctors");
 
             entity.HasOne(d => d.Patient).WithMany(p => p.Appointments)
                 .HasForeignKey(d => d.PatientId)
@@ -87,28 +80,6 @@ public partial class ClinicContext : DbContext
             entity.Property(e => e.SocialGroup)
                 .HasMaxLength(50)
                 .HasColumnName("Social_group");
-        });
-
-        modelBuilder.Entity<Doctor>(entity =>
-        {
-            entity.HasKey(e => e.Id).HasName("PK_Doctors_1");
-
-            entity.Property(e => e.ClinicId).HasColumnName("Clinic_id");
-            entity.Property(e => e.Email)
-                .HasMaxLength(50)
-                .IsUnicode(false);
-            entity.Property(e => e.FatherName).HasMaxLength(50);
-            entity.Property(e => e.FirstName).HasMaxLength(50);
-            entity.Property(e => e.LastName).HasMaxLength(50);
-            entity.Property(e => e.PhoneNumber)
-                .HasMaxLength(10)
-                .IsUnicode(false)
-                .IsFixedLength();
-
-            entity.HasOne(d => d.Clinic).WithMany(p => p.Doctors)
-                .HasForeignKey(d => d.ClinicId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Doctors_Clinic");
         });
 
         modelBuilder.Entity<PatientCard>(entity =>

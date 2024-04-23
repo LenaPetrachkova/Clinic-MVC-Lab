@@ -12,23 +12,25 @@ using X.PagedList;
 using ClinicDomain.Model;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authorization;
+using ClinicInfrastructure.Services;
 
 namespace ClinicInfrastructure.Controllers
 {
     public class PatientCardsController : Controller
     {
-        private readonly ClinicContext _context;
-        private readonly UserManager<User> _userManager;
+            private readonly ClinicContext _context;
+            private readonly UserManager<User> _userManager;
+            private readonly PatientCardDataPortServiceFactory _patientCardDataPortServiceFactory;
 
-        public PatientCardsController(ClinicContext context, UserManager<User> userManager)
-        {
-            _context = context;
-            _userManager = userManager;
-        }
+            public PatientCardsController(ClinicContext context, UserManager<User> userManager, PatientCardDataPortServiceFactory patientCardDataPortServiceFactory)
+            {
+                _context = context;
+                _userManager = userManager;
+                _patientCardDataPortServiceFactory = patientCardDataPortServiceFactory;
+            }
 
 
         // GET: PatientCards
-
         public async Task<IActionResult> Index(string searchString, int? page)
         {
             var currentUser = await _userManager.GetUserAsync(User);
@@ -239,9 +241,57 @@ namespace ClinicInfrastructure.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        [Authorize(Roles = "Doctor, Owner")]
+        [HttpGet]
+        public IActionResult Import()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize(Roles = "Doctor, Owner")]
+        public async Task<IActionResult> Import(IFormFile fileExcel, CancellationToken cancellationToken = default)
+        {
+            var importService = _patientCardDataPortServiceFactory.GetImportService(fileExcel.ContentType);
+
+            using var stream = fileExcel.OpenReadStream();
+
+            var currentUser = await _userManager.GetUserAsync(User);
+            if (currentUser == null)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
+            await importService.ImportFromStreamAsync(stream, cancellationToken);
+
+            return RedirectToAction(nameof(Index));
+        }
+
+        [Authorize(Roles = "Doctor, Owner")]
+        [HttpGet]
+        public async Task<IActionResult> Export([FromQuery] string contentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+       CancellationToken cancellationToken = default)
+        {
+            var exportService = _patientCardDataPortServiceFactory.GetExportService(contentType);
+
+            var memoryStream = new MemoryStream();
+
+            await exportService.WriteToAsync(memoryStream, cancellationToken);
+
+            await memoryStream.FlushAsync(cancellationToken);
+            memoryStream.Position = 0;
+
+
+            return new FileStreamResult(memoryStream, contentType)
+            {
+                FileDownloadName = $"patientList_{DateTime.UtcNow.ToShortDateString()}.xlsx"
+            };
+        }
+
         private bool PatientCardExists(int id)
         {
             return _context.PatientCards.Any(e => e.Id == id);
         }
+
     }
 }

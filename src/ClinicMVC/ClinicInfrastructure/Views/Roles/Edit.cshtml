@@ -10,13 +10,16 @@
 <form asp-action="Edit" method="post">
     <input type="hidden" name="userId" value="@Model.UserId" />
     <div class="form-group" style="font-size:25px; margin-top: 30px;">
-        @foreach (IdentityRole role in Model.AllRoles)
-        {
-            <input type="checkbox" name="roles" value="@role.Name"
-            @(Model.UserRoles.Contains(role.Name) ? "checked=\"checked\"" : "") />
+       @if (User.IsInRole("Owner"))
+       {
+            @foreach (IdentityRole role in Model.AllRoles)
+            {
+                <input type="checkbox" name="roles" value="@role.Name"
+                @(Model.UserRoles.Contains(role.Name) ? "checked=\"checked\"" : "")
+                @(role.Name == "Owner" ? "disabled" : "") /> @role.Name <br />
 
-            @role.Name <br />
-        }
+            }
+       }
     </div>
     <button type="submit" class="btn btn-primary" style="margin-top:20px;">Зберегти</button>
 </form>

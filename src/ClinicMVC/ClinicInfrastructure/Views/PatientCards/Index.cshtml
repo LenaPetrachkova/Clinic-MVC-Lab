@@ -5,19 +5,70 @@
 @{
     ViewData["Title"] = "Index";
 }
-<div style="margin-top: 20px; position: relative;">
-    <a asp-area="" asp-controller="Home" asp-action="" class="image-button" style="position: absolute; left: -40px; top: 50%; transform: translateY(-50%);"></a>
-    <h2>Пацієнти</h2>
+<div style="margin-top: 20px; position: relative; display: flex; justify-content: space-between;">
+    <div style="flex-grow: 1;">
+        <a asp-area="" asp-controller="Home" asp-action="" class="image-button" style="position: absolute; left: -40px; top: 45%; transform: translateY(-50%);"></a>
+        <h2>Пацієнти</h2>
+    </div>
+    @if (User.IsInRole("Doctor") || User.IsInRole("Owner"))
+    {
+        <div>
+            @using (Html.BeginForm("Import", "PatientCards", FormMethod.Post, new { enctype = "multipart/form-data", id = "frm-excel" }))
+            {
+                <div style="margin-top:20px;">
+                    <h4>Завантажте Excel-файл:</h4>
+                    <input type="file" name="fileExcel" id="fileExcel" />
+                    <div>
+                        <input type="submit" class="btn btn-primary" style="margin-top:15px;" value="Завантажити" />
+                        <button id="exportBtn" class="btn btn-primary" style="margin-top:15px; margin-left:17px;">Експортувати у файл</button>
+                    </div>
+                </div>
+            }
+        </div>
+    }
 </div>
+
+<script>
+    document.getElementById('exportBtn').addEventListener('click', function () {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', '/PatientCards/Export', true);
+        xhr.responseType = 'blob';
+
+        xhr.onload = function () {
+            if (this.status === 200) {
+                var blob = this.response;
+                var fileName = 'patientList_' + new Date().toLocaleDateString() + '.xlsx';
+
+                if (window.navigator && window.navigator.msSaveOrOpenBlob) {
+                    window.navigator.msSaveOrOpenBlob(blob, fileName);
+                } else {
+                    var link = document.createElement('a');
+                    link.href = window.URL.createObjectURL(blob);
+                    link.download = fileName;
+
+                    document.body.appendChild(link);
+                    link.click();
+
+                    document.body.removeChild(link);
+                }
+            }
+        };
+
+        xhr.send();
+    });
+</script>
+
+
 
 
 <div style="position: relative;">
     <div class="d-flex align-items-center" style="margin-bottom:20px; margin-top:20px;">
-        @if (User.IsInRole("Doctor") || User.IsInRole("Owner"))
+        @if (User.IsInRole("Doctor") || User.IsInRole("Owner")) {
 {
         <p class="me-2 mb-0">
             <a asp-action="Create" class="btn btn-primary">Додати</a>
         </p>
+}
 }
         <form class="input-group mb-0 d-flex ms-auto justify-content-end">
             <input class="form-control" name="searchString" style="max-width: 300px;" placeholder="Пошук" aria-describedby="button-addon2" value="@ViewBag.CurrentFilter">
